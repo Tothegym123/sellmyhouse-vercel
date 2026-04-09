@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18052501312"></script>
+<!-- Google tag (gtag.js) - deferred for performance -->
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-18052501312');
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+function _loadGTM(){if(window._gtmL)return;window._gtmL=1;var s=document.createElement("script");s.src="https://www.googletagmanager.com/gtag/js?id=AW-18052501312";document.head.appendChild(s);gtag("js",new Date());gtag("config","AW-18052501312");}
+["click","scroll","keydown","touchstart"].forEach(function(e){window.addEventListener(e,_loadGTM,{once:true,passive:true});});
+setTimeout(_loadGTM,3500);
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn about Tidewater Property Rentals LLC - a trusted local cash home buyer serving Hampton Roads, Virginia. Fair offers, fast closings, no hidden fees.">
     <title>About Us | We Buy Houses Hampton Roads VA</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
     <style>
         :root {
             --primary: #1a5276;
@@ -412,7 +414,7 @@
                 <a href="/contact/">Contact</a>
                 <a href="/contact/" class="cta-btn">Get My Cash Offer</a>
             </div>
-            <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</button>
+            <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">â°</button>
         </div>
     </nav>
 
