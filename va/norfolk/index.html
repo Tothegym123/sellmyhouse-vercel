@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18052501312"></script>
+<!-- Google tag (gtag.js) - deferred for performance -->
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-18052501312');
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+function _loadGTM(){if(window._gtmL)return;window._gtmL=1;var s=document.createElement("script");s.src="https://www.googletagmanager.com/gtag/js?id=AW-18052501312";document.head.appendChild(s);gtag("js",new Date());gtag("config","AW-18052501312");}
+["click","scroll","keydown","touchstart"].forEach(function(e){window.addEventListener(e,_loadGTM,{once:true,passive:true});});
+setTimeout(_loadGTM,3500);
 </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
