@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18052501312"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18052501312');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Tidewater Property Rentals LLC - a trusted local cash home buyer serving Hampton Roads, Virginia. Fair offers, fast closings, no hidden fees.">
+    <title>About Us | We Buy Houses Hampton Roads VA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a5276;
+            --primary-light: #2980b9;
+            --accent: #e67e22;
+            --accent-hover: #d35400;
+            --dark: #1b2838;
+            --text: #2c3e50;
+            --text-light: #5d6d7e;
+            --light-bg: #f0f6fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background-color: #fff;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        .navbar {
+            background-color: var(--primary);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            background-color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .cta-btn {
+            background-color: var(--accent) !important;
+            color: #fff !important;
+            padding: 0.7rem 1.5rem !important;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--accent-hover) !important;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background-color: var(--primary);
+                gap: 0;
+                padding: 1rem 0;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 0.8rem 2rem;
+                width: 100%;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: #fff;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 4rem 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            text-align: center;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+
+        .mission-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background-color: var(--light-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .feature-card p {
+            font-size: 1rem;
+        }
+
+        .values {
+            background-color: var(--light-bg);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .value-item {
+            background-color: #fff;
+            padding: 2rem;
+            border-left: 5px solid var(--accent);
+            border-radius: 4px;
+        }
+
+        .value-item h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .service-area-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .service-area-list li {
+            list-style: none;
+            padding: 0.8rem 0 0.8rem 2rem;
+            position: relative;
+            color: var(--text);
+            font-size: 1.1rem;
+        }
+
+        .service-area-list li:before {
+            content: "\2713";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: #fff;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        .cta-section h2 {
+            color: #fff;
+            margin-bottom: 2rem;
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: 2rem auto;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+        }
+
+        .submit-btn {
+            background-color: var(--accent);
+            color: #fff;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        footer {
+            background-color: var(--dark);
+            color: #fff;
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent);
+        }
+
+        .footer-contact p {
+            margin-bottom: 0.8rem;
+            color: #bbb;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+            text-align: center;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 2rem 1.5rem;
+            }
+
+            section h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+
+    <link rel="canonical" href="https://sellmyhousefasthamptonroadsva.com/about/">\n    <meta property="og:type" content="website">\n    <meta property="og:title" content="About Us | We Buy Houses Hampton Roads VA">\n    <meta property="og:description" content="Learn about Tidewater Property Rentals LLC, a trusted Hampton Roads cash home buyer. We help homeowners sell fast with fair offers and no hassle.">\n    <meta property="og:url" content="https://sellmyhousefasthamptonroadsva.com/about/">\n    <meta property="og:site_name" content="Tidewater Property Rentals LLC">\n    <meta name="twitter:card" content="summary">\n    <meta name="twitter:title" content="About Us | We Buy Houses Hampton Roads VA">\n    <meta name="twitter:description" content="Learn about Tidewater Property Rentals LLC, a trusted Hampton Roads cash home buyer. We help homeowners sell fast with fair offers and no hassle.">\n</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="/" class="logo">TIDEWATER<span> PROPERTY RENTALS LLC</span></a>
+            <div class="nav-links">
+                <a href="/how-it-works/">How It Works</a>
+                <a href="/about/">About</a>
+                <a href="/our-company/">Our Company</a>
+                <a href="/blog/">Blog</a>
+                <a href="/faq/">FAQ</a>
+                <a href="/contact/">Contact</a>
+                <a href="/contact/" class="cta-btn">Get My Cash Offer</a>
+            </div>
+            <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>About Tidewater Property Rentals LLC</h1>
+        <p>Our mission is simple: help Hampton Roads homeowners sell their homes quickly, fairly, and without stress.</p>
+    </section>
+
+    <section>
+        <h2>Our Mission</h2>
+        <div class="mission-content">
+            <p>At Tidewater Property Rentals LLC, we understand that selling a home can be one of life's most stressful decisions. Whether you're facing foreclosure, going through a divorce, dealing with an inherited property, or simply need to relocate quickly, we're here to help. We buy homes directly, eliminating the hassle of listing fees, open houses, and uncertain timelines.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>What Makes Us Different</h2>
+        <div class="features">
+            <div class="feature-card">
+                <h3>Fair Offers</h3>
+                <p>We provide honest, competitive cash offers based on the current market value of your home, without hidden deductions or surprise fees.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Fast Closings</h3>
+                <p>No waiting for inspections or appraisals. We can close in as little as 7 days, giving you the flexibility you need.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Local Experts</h3>
+                <p>Our team knows the Hampton Roads market inside and out. We're invested in our community and committed to fair dealings.</p>
+            </div>
+            <div class="feature-card">
+                <h3>No Hidden Fees</h3>
+                <p>The offer you receive is the cash you walk away with. No commissions, no closing costs, no surprises.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="values">
+        <h2>Our Values</h2>
+        <div class="values-grid">
+            <div class="value-item">
+                <h3>Integrity</h3>
+                <p>We conduct business with honesty and transparency. Every conversation, every offer, and every transaction is handled with respect and professionalism.</p>
+            </div>
+            <div class="value-item">
+                <h3>Transparency</h3>
+                <p>No jargon, no hidden terms, no surprises. We explain the process clearly from start to finish so you understand exactly how we work.</p>
+            </div>
+            <div class="value-item">
+                <h3>Community</h3>
+                <p>We're not just a business\u2014we're part of the Hampton Roads community. We reinvest in our neighborhoods and support local causes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Serving Hampton Roads</h2>
+        <p style="text-align: center; margin-bottom: 2rem;">We buy homes throughout the greater Hampton Roads area, including:</p>
+        <ul class="service-area-list">
+            <li>Virginia Beach</li>
+            <li>Norfolk</li>
+            <li>Chesapeake</li>
+            <li>Hampton</li>
+            <li>Newport News</li>
+            <li>Portsmouth</li>
+        </ul>
+    </section>
+
+    <section class="cta-section">
+        <h2>Ready to Sell Your Home?</h2>
+        <p>Get a free, no-obligation cash offer in 24 hours.</p>
+        <div class="form-container">
+            <form id="leadForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Property Address</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <button type="submit" class="submit-btn">Get My Cash Offer</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/how-it-works/">How It Works</a></li>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/our-company/">Our Company</a></li>
+                    <li><a href="/locations/">Locations</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/faq/">FAQ</a></li>
+                    <li><a href="/contact/">Contact Us</a></li>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-contact">
+                <h3>Contact Info</h3>
+                <p>Hampton Roads, Virginia</p>
+                <p>Email: tom@vahomes.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tidewater Property Rentals LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            var formData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                address: document.getElementById('address').value
+            };
+            fetch('/va/virginia-beach/submit-lead.php', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(formData)
+            })
+            .then(function(response) {
+                if (response.ok) {
+                    alert('Thank you! We will contact you within 24 hours with your cash offer.');
+                    document.getElementById('leadForm').reset();
+                } else {
+                    alert('There was an error. Please try again.');
+                }
+            })
+            .catch(function(error) {
+                alert('There was an error. Please try again.');
+            });
+        }
+    </script>
+</body>
+</html>
