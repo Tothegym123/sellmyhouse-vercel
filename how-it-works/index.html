@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18052501312"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18052501312');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works | Sell Your House Fast in Virginia</title>
+    <meta name="description" content="Learn our simple 3-step process to sell your house fast in Hampton Roads. Get a cash offer in 24 hours, close in as few as 7 days. No fees or repairs.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a5276;
+            --primary-light: #2980b9;
+            --accent: #e67e22;
+            --accent-hover: #d35400;
+            --dark: #1b2838;
+            --text: #2c3e50;
+            --text-light: #5d6d7e;
+            --light-bg: #f0f6fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--accent);
+            margin-left: 5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .cta-btn {
+            background-color: var(--accent) !important;
+            color: white !important;
+            padding: 12px 24px !important;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--accent-hover) !important;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                background-color: white;
+                padding: 20px;
+                gap: 15px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+        }
+
+        .hero-banner {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero-banner h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .hero-banner p {
+            font-size: 18px;
+            opacity: 0.95;
+        }
+
+        .steps-section {
+            padding: 80px 20px;
+            background-color: white;
+        }
+
+        .step {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .step:nth-child(even) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .step:nth-child(even) .step-content {
+            order: 2;
+        }
+
+        .step:nth-child(even) .step-image {
+            order: 1;
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background-color: var(--accent);
+            color: white;
+            border-radius: 50%;
+            line-height: 60px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .step-content h2 {
+            font-size: 32px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .step-content p {
+            font-size: 16px;
+            color: var(--text-light);
+            line-height: 1.9;
+            margin-bottom: 15px;
+        }
+
+        .step-image {
+            background-color: var(--light-bg);
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .step-image-placeholder {
+            font-size: 80px;
+        }
+
+        @media (max-width: 768px) {
+            .step {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                margin-bottom: 60px;
+            }
+
+            .step:nth-child(even) {
+                grid-template-columns: 1fr;
+            }
+
+            .step:nth-child(even) .step-content {
+                order: 1;
+            }
+
+            .step:nth-child(even) .step-image {
+                order: 2;
+            }
+
+            .step-content h2 {
+                font-size: 24px;
+            }
+        }
+
+        .why-different {
+            padding: 80px 20px;
+            background-color: var(--light-bg);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            color: var(--dark);
+            margin-bottom: 50px;
+        }
+
+        .comparison-table {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .table-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .table-row:last-child {
+            border-bottom: none;
+        }
+
+        .table-row.header {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .table-cell {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            color: var(--text);
+        }
+
+        .table-row.header .table-cell {
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .table-row:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        .checkmark {
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .x-mark {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .table-row {
+                grid-template-columns: 1fr;
+            }
+
+            .table-row.header {
+                display: none;
+            }
+
+            .table-cell {
+                padding: 15px;
+                border: none;
+            }
+
+            .table-cell::before {
+                content: attr(data-label);
+                font-weight: 700;
+                color: var(--primary);
+                margin-right: 10px;
+            }
+        }
+
+        .cta-section {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        .cta-form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 15px;
+            font-family: 'Open Sans', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 50px 20px 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto 40px;
+        }
+
+        .footer h4 {
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+
+        .footer p {
+            color: #bbb;
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+        }
+    </style>
+
+    <link rel="canonical" href="https://sellmyhousefasthamptonroadsva.com/how-it-works/">\n    <meta property="og:type" content="website">\n    <meta property="og:title" content="How It Works | Sell Your House Fast in Virginia">\n    <meta property="og:description" content="Our simple 3-step process: request an offer, get a fair cash price, and close on your timeline. No repairs, no commissions, no fees.">\n    <meta property="og:url" content="https://sellmyhousefasthamptonroadsva.com/how-it-works/">\n    <meta property="og:site_name" content="Tidewater Property Rentals LLC">\n    <meta name="twitter:card" content="summary">\n    <meta name="twitter:title" content="How It Works | Sell Your House Fast in Virginia">\n    <meta name="twitter:description" content="Our simple 3-step process: request an offer, get a fair cash price, and close on your timeline. No repairs, no commissions, no fees.">\n</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="/" class="logo">TIDEWATER<span> PROPERTY RENTALS LLC</span></a>
+            <div class="nav-links">
+                <a href="/how-it-works/">How It Works</a>
+                <a href="/about/">About</a>
+                <a href="/our-company/">Our Company</a>
+                <a href="/blog/">Blog</a>
+                <a href="/faq/">FAQ</a>
+                <a href="/contact/">Contact</a>
+                <a href="/contact/" class="cta-btn">Get My Cash Offer</a>
+            </div>
+            <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</button>
+        </div>
+    </nav>
+
+    <section class="hero-banner">
+        <div class="container">
+            <h1>How Tidewater Property Rentals LLC Works</h1>
+            <p>A Simple 3-Step Process to Sell Your Home Fast</p>
+        </div>
+    </section>
+
+    <section class="steps-section">
+        <div class="container">
+            <div class="step">
+                <div class="step-content">
+                    <div class="step-number">1</div>
+                    <h2>Contact Us</h2>
+                    <p>Getting started is easy. Simply fill out our quick form or give us a call. Tell us about your property, your situation, and what's important to you. There's no obligation and no pressure.</p>
+                    <p>We understand that every homeowner has unique circumstances. Whether you're facing foreclosure, dealing with an inherited property, relocating, or just ready for a change, we're here to listen and help.</p>
+                </div>
+                <div class="step-image">
+                    <div class="step-image-placeholder">📋</div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-image">
+                    <div class="step-image-placeholder">💰</div>
+                </div>
+                <div class="step-content">
+                    <div class="step-number">2</div>
+                    <h2>Get Your Cash Offer</h2>
+                    <p>After you contact us, our team evaluates your property carefully. We consider the current market conditions, the property's condition, location, and comparable sales in your area. Within 24 hours, we present you with a fair, all-cash offer with no hidden terms or surprise fees.</p>
+                    <p>You're not obligated to accept our offer. Take time to review it, think it over, or discuss it with your family. We'll answer any questions you have about the offer process.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-content">
+                    <div class="step-number">3</div>
+                    <h2>Close On Your Timeline</h2>
+                    <p>Once you accept our cash offer, you choose when you want to close. We can close in as little as 7 days or take 30, 60, or 90 days if that works better for your situation. We're flexible and work with your schedule.</p>
+                    <p>Our team handles all the paperwork, inspections, and title work. At closing, you receive your cash payment in full. No contingencies, no financing delays, no surprises. You walk away with the funds and move forward with your life.</p>
+                </div>
+                <div class="step-image">
+                    <div class="step-image-placeholder">✅</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-different">
+        <div class="container">
+            <h2 class="section-title">Why Our Process Is Different</h2>
+            <div class="comparison-table">
+                <div class="table-row header">
+                    <div class="table-cell">Feature</div>
+                    <div class="table-cell">Tidewater Property Rentals LLC</div>
+                    <div class="table-cell">Traditional Sale</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell" data-label="Feature">Time to Close</div>
+                    <div class="table-cell" data-label="Tidewater Property Rentals LLC"><span class="checkmark">✓</span> 7-30 days</div>
+                    <div class="table-cell" data-label="Traditional"><span class="x-mark">✗</span> 30-90+ days</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell" data-label="Feature">Repairs Required</div>
+                    <div class="table-cell" data-label="Tidewater Property Rentals LLC"><span class="checkmark">✓</span> None</div>
+                    <div class="table-cell" data-label="Traditional"><span class="x-mark">✗</span> Often thousands</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell" data-label="Feature">Agent Commissions</div>
+                    <div class="table-cell" data-label="Tidewater Property Rentals LLC"><span class="checkmark">✓</span> None</div>
+                    <div class="table-cell" data-label="Traditional"><span class="x-mark">✗</span> 5-6%</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell" data-label="Feature">Home Inspections</div>
+                    <div class="table-cell" data-label="Tidewater Property Rentals LLC"><span class="checkmark">✓</span> We handle it</div>
+                    <div class="table-cell" data-label="Traditional"><span class="x-mark">✗</span> Buyer's choice</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell" data-label="Feature">Contingencies</div>
+                    <div class="table-cell" data-label="Tidewater Property Rentals LLC"><span class="checkmark">✓</span> None</div>
+                    <div class="table-cell" data-label="Traditional"><span class="x-mark">✗</span> Multiple</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell" data-label="Feature">Financing Risk</div>
+                    <div class="table-cell" data-label="Tidewater Property Rentals LLC"><span class="checkmark">✓</span> Cash payment</div>
+                    <div class="table-cell" data-label="Traditional"><span class="x-mark">✗</span> Buyer financing</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell" data-label="Feature">Appraisal Required</div>
+                    <div class="table-cell" data-label="Tidewater Property Rentals LLC"><span class="checkmark">✓</span> No</div>
+                    <div class="table-cell" data-label="Traditional"><span class="x-mark">✗</span> Yes</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Get Your Cash Offer?</h2>
+            <div class="cta-form-container">
+                <form id="ctaForm">
+                    <div class="form-group">
+                        <label for="ctaFirstName">First Name *</label>
+                        <input type="text" id="ctaFirstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ctaLastName">Last Name *</label>
+                        <input type="text" id="ctaLastName" name="lastName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ctaEmail">Email *</label>
+                        <input type="email" id="ctaEmail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ctaPhone">Phone Number *</label>
+                        <input type="tel" id="ctaPhone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ctaAddress">Property Address *</label>
+                        <input type="text" id="ctaAddress" name="address" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Get My Cash Offer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4>Tidewater Property Rentals LLC</h4>
+                    <p>We buy houses in Hampton Roads, Virginia. Get a fair cash offer for your home in any condition. No repairs, no agents, no fees.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="/how-it-works/">How It Works</a>
+                    <a href="/about/">About Us</a>
+                    <a href="/our-company/">Our Company</a>
+                    <a href="/locations/">Locations</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <a href="/blog/">Blog</a>
+                    <a href="/faq/">FAQ</a>
+                    <a href="/contact/">Contact Us</a>
+                    <a href="/privacy/">Privacy Policy</a>
+                </div>
+                <div>
+                    <h4>Contact Us</h4>
+                    <p>Hampton Roads, Virginia</p>
+                    <p>Email: tom@vahomes.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Tidewater Property Rentals LLC. All Rights Reserved. | Hampton Roads, VA
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('ctaForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var formData = {
+                firstName: document.getElementById('ctaFirstName').value,
+                lastName: document.getElementById('ctaLastName').value,
+                email: document.getElementById('ctaEmail').value,
+                phone: document.getElementById('ctaPhone').value,
+                address: document.getElementById('ctaAddress').value
+            };
+            fetch('/va/virginia-beach/submit-lead.php', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(formData)
+            })
+            .then(function(response) {
+                if (response.ok) {
+                    alert('Thank you! We will contact you shortly with your cash offer.');
+                    document.getElementById('ctaForm').reset();
+                } else {
+                    alert('There was an error submitting your information. Please try again.');
+                }
+            })
+            .catch(function(error) {
+                console.error('Error:', error);
+                alert('There was an error submitting your information. Please try again.');
+            });
+        });
+    </script>
+</body>
+</html>
