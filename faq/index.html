@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18052501312"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18052501312');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions | Tidewater Property Rentals LLC</title>
+    <meta name="description" content="Find answers to common questions about selling your house fast for cash in Hampton Roads, Virginia.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a5276;
+            --primary-light: #2980b9;
+            --accent: #e67e22;
+            --accent-hover: #d35400;
+            --dark: #1b2838;
+            --text: #2c3e50;
+            --text-light: #5d6d7e;
+            --light-bg: #f0f6fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background-color: #fff;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--primary);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+
+        .logo-tidewater {
+            color: #fff;
+        }
+
+        .logo-homebuyerstext {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .cta-button {
+            background-color: var(--accent);
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: #fff;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 900px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            background-color: var(--light-bg);
+            padding: 1.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--primary);
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .faq-question:hover {
+            background-color: #e8f0f7;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent);
+        }
+
+        .faq-answer {
+            padding: 1.5rem;
+            color: var(--text-light);
+            background-color: #fff;
+            display: none;
+            line-height: 1.8;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background-color: var(--light-bg);
+            padding: 4rem 2rem;
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .cta-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: var(--text-light);
+        }
+
+        /* Contact Form in CTA */
+        .quick-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .form-group input {
+            flex: 1;
+        }
+
+        input, textarea {
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.95rem;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .submit-btn {
+            background-color: var(--accent);
+            color: #fff;
+            padding: 1rem;
+            border: none;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: #fff;
+            padding: 3rem 2rem 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent);
+        }
+
+        .footer-section p {
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 1.5rem;
+            text-align: center;
+            color: #999;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary);
+                flex-direction: column;
+                padding: 1rem 0;
+                gap: 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 1rem 2rem;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .faq-question {
+                font-size: 0.95rem;
+            }
+
+            .cta-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .form-group {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+    <link rel="canonical" href="https://sellmyhousefasthamptonroadsva.com/faq/">\n    <meta property="og:type" content="website">\n    <meta property="og:title" content="FAQ | Tidewater Property Rentals LLC">\n    <meta property="og:description" content="Answers to common questions about selling your house for cash in Hampton Roads. Learn about our process, timeline, and how we make fair offers.">\n    <meta property="og:url" content="https://sellmyhousefasthamptonroadsva.com/faq/">\n    <meta property="og:site_name" content="Tidewater Property Rentals LLC">\n    <meta name="twitter:card" content="summary">\n    <meta name="twitter:title" content="FAQ | Tidewater Property Rentals LLC">\n    <meta name="twitter:description" content="Answers to common questions about selling your house for cash in Hampton Roads. Learn about our process, timeline, and how we make fair offers.">\n</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <span class="logo-tidewater">TIDEWATER</span><span class="logo-homebuyerstext"> PROPERTY RENTALS LLC</span>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="/">Home</a></li>
+            <li><a href="/how-it-works/">How It Works</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/our-company/">Our Company</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/contact/" class="cta-button">Get My Cash Offer</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Frequently Asked Questions</h1>
+        <p>Find answers to common questions about selling your home fast</p>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <!-- FAQ Item 1 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>How does selling to Tidewater Property Rentals LLC work?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                The process is simple and straightforward. You contact us with details about your property, we evaluate it and provide a free cash offer, you review the offer, and if you accept, we handle all closing costs and paperwork to get you paid quicklyâtypically within 7-14 days.
+            </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>How fast can you close on my house?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                We specialize in fast closings. Most transactions close within 7 to 14 days, and we can even close faster if you have a specific deadline. Our streamlined process eliminates many delays typical in traditional real estate transactions.
+            </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>Do I need to make repairs before selling?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                No, you don't need to make any repairs. We buy properties in any conditionâwhether they need cosmetic updates, structural repairs, or are completely move-in ready. We handle all repairs and improvements after purchase, saving you time and money.
+            </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>Are there any fees or commissions?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                No hidden fees or commissions. We cover all closing costs, title fees, and transfer taxes. The offer we provide is the amount you receiveâwhat you see is what you get, with no surprises at closing.
+            </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>What types of properties do you buy?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                We buy all types of properties including single-family homes, multi-unit properties, condos, townhouses, and investment properties. Whether your home is occupied, vacant, or in any condition, we're interested in making an offer.
+            </div>
+        </div>
+
+        <!-- FAQ Item 6 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>How do you determine your offer price?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                We evaluate the property's location, condition, market value, and current demand. Our team analyzes recent comparable sales and repair costs to provide a fair market-based offer. We're transparent about our valuation process.
+            </div>
+        </div>
+
+        <!-- FAQ Item 7 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>What if my house is in foreclosure?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                We can help with foreclosure situations. We work quickly to provide offers before foreclosure proceedings conclude, and we can often pay off the lender and stop the foreclosure process, allowing you to walk away without damaging your credit.
+            </div>
+        </div>
+
+        <!-- FAQ Item 8 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>Do I need to clean out the house before selling?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                You don't need to clean or clear out your home. We buy properties "as-is," including any contents, personal items, or furniture left behind. This saves you time and the expense of removing items yourself.
+            </div>
+        </div>
+
+        <!-- FAQ Item 9 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>Is your cash offer obligatory?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                Our offer is not obligatory. There's no commitment to sell. We provide a no-obligation cash offer for your review, and you have the freedom to accept, negotiate, or decline without any pressure or penalty.
+            </div>
+        </div>
+
+        <!-- FAQ Item 10 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>What areas do you serve?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                We serve the entire Hampton Roads area including Virginia Beach, Norfolk, Chesapeake, Hampton, Newport News, Portsmouth, and surrounding communities. If you're unsure whether we serve your area, contact us and we'll let you know.
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Still Have Questions?</h2>
+        <p>Get in touch with our team. We're here to answer any questions and provide your free cash offer.</p>
+        <form class="quick-form" method="POST" action="/va/virginia-beach/submit-lead.php">
+            <div class="form-group">
+                <input type="text" name="firstName" placeholder="First Name" required>
+                <input type="text" name="lastName" placeholder="Last Name" required>
+            </div>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="phone" name="phone" placeholder="Phone Number" required>
+            <input type="text" name="address" placeholder="Property Address" required>
+            <textarea name="message" placeholder="Additional questions or details..." style="display: none;"></textarea>
+            <button type="submit" class="submit-btn">Get Your Free Offer</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About</h3>
+                <p>Tidewater Property Rentals LLC is a trusted real estate investment company buying homes across Hampton Roads, Virginia. We help homeowners sell quickly for cash without hassle.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/how-it-works/">How It Works</a></li>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/our-company/">Our Company</a></li>
+                    <li><a href="/locations/">Locations</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/faq/">FAQ</a></li>
+                    <li><a href="/contact/">Contact Us</a></li>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><strong>Hampton Roads, Virginia</strong></p>
+                <p>Email: <a href="mailto:tom@vahomes.com">tom@vahomes.com</a></p>
+                <p style="margin-top: 1rem; font-size: 0.85rem;">Available Monday - Friday, 9am - 6pm EST</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tidewater Property Rentals LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // FAQ Accordion Toggle
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const toggle = element.querySelector('.faq-toggle');
+
+            // Close other open FAQs
+            document.querySelectorAll('.faq-answer.active').forEach(openAnswer => {
+                if (openAnswer !== answer) {
+                    openAnswer.classList.remove('active');
+                    openAnswer.previousElementSibling.querySelector('.faq-toggle').textContent = '+';
+                }
+            });
+
+            // Toggle current FAQ
+            answer.classList.toggle('active');
+            toggle.textContent = answer.classList.contains('active') ? 'â' : '+';
+        }
+
+        // Form submission
+        document.querySelector('.quick-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = {
+                firstName: document.querySelector('input[name="firstName"]').value,
+                lastName: document.querySelector('input[name="lastName"]').value,
+                email: document.querySelector('input[name="email"]').value,
+                phone: document.querySelector('input[name="phone"]').value,
+                address: document.querySelector('input[name="address"]').value
+            };
+            fetch('/va/virginia-beach/submit-lead.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            }).then(response => {
+                if (response.ok) {
+                    alert('Thank you! We will contact you soon with your cash offer.');
+                    document.querySelector('.quick-form').reset();
+                } else {
+                    alert('There was an error submitting your information. Please try again.');
+                }
+            }).catch(error => {
+                console.error('Error:', error);
+                alert('There was an error submitting your information. Please try again.');
+            });
+        });
+    </script>
+</body>
+</html>
