@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18052501312"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18052501312');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Areas We Serve | Hampton Roads Cash Home Buyers</title>
+    <meta name="description" content="Tidewater Property Rentals LLC serves Virginia Beach, Norfolk, Chesapeake, Hampton, Newport News, Portsmouth and all of Hampton Roads, Virginia.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a5276;
+            --primary-light: #2980b9;
+            --accent: #e67e22;
+            --accent-hover: #d35400;
+            --dark: #1b2838;
+            --text: #2c3e50;
+            --text-light: #5d6d7e;
+            --light-bg: #f0f6fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background-color: #fff;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--primary);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+
+        .logo-tidewater {
+            color: #fff;
+        }
+
+        .logo-homebuyerstext {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .cta-button {
+            background-color: var(--accent);
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: #fff;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+        }
+
+        /* Locations Section */
+        .locations-section {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        /* City Cards Grid */
+        .city-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0 4rem 0;
+        }
+
+        .city-card {
+            background: linear-gradient(135deg, var(--light-bg) 0%, #fff 100%);
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .city-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 8px 20px rgba(230, 126, 34, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .city-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .city-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .city-description {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .city-link-btn {
+            background-color: var(--accent);
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            display: inline-block;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .city-link-btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* Coverage Section */
+        .coverage-section {
+            background-color: var(--light-bg);
+            padding: 3rem 2rem;
+            margin: 4rem 0;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .coverage-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .coverage-text {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--text-light);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: #fff;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin: 4rem 0;
+            border-radius: 8px;
+        }
+
+        .cta-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-section .cta-button {
+            background-color: var(--accent);
+        }
+
+        .cta-section .cta-button:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: #fff;
+            padding: 3rem 2rem 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent);
+        }
+
+        .footer-section p {
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 1.5rem;
+            text-align: center;
+            color: #999;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary);
+                flex-direction: column;
+                padding: 1rem 0;
+                gap: 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 1rem 2rem;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .city-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .coverage-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .cta-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+
+    <link rel="canonical" href="https://sellmyhousefasthamptonroadsva.com/locations/">\n    <meta property="og:type" content="website">\n    <meta property="og:title" content="Areas We Serve | Hampton Roads Cash Home Buyers">\n    <meta property="og:description" content="We buy houses in Virginia Beach, Norfolk, Chesapeake, Hampton, Newport News, and Portsmouth. Get a cash offer for your Hampton Roads home today.">\n    <meta property="og:url" content="https://sellmyhousefasthamptonroadsva.com/locations/">\n    <meta property="og:site_name" content="Tidewater Property Rentals LLC">\n    <meta name="twitter:card" content="summary">\n    <meta name="twitter:title" content="Areas We Serve | Hampton Roads Cash Home Buyers">\n    <meta name="twitter:description" content="We buy houses in Virginia Beach, Norfolk, Chesapeake, Hampton, Newport News, and Portsmouth. Get a cash offer for your Hampton Roads home today.">\n</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <span class="logo-tidewater">TIDEWATER</span><span class="logo-homebuyerstext"> PROPERTY RENTALS LLC</span>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="/">Home</a></li>
+            <li><a href="/how-it-works/">How It Works</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/our-company/">Our Company</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/contact/" class="cta-button">Get My Cash Offer</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Areas We Serve</h1>
+        <p>Serving the entire Hampton Roads community with fast, fair cash offers</p>
+    </section>
+
+    <!-- Locations Section -->
+    <section class="locations-section">
+        <div class="city-grid">
+            <!-- Virginia Beach -->
+            <a href="/va/virginia-beach/" class="city-card">
+                <div class="city-icon">ðï¸</div>
+                <div class="city-name">Virginia Beach</div>
+                <div class="city-description">The largest city in Hampton Roads with diverse neighborhoods and properties</div>
+                <div class="city-link-btn">Learn More</div>
+            </a>
+
+            <!-- Norfolk -->
+            <a href="/va/norfolk/" class="city-card">
+                <div class="city-icon">â</div>
+                <div class="city-name">Norfolk</div>
+                <div class="city-description">Historic waterfront city with residential and commercial properties</div>
+                <div class="city-link-btn">Learn More</div>
+            </a>
+
+            <!-- Chesapeake -->
+            <a href="/va/chesapeake/" class="city-card">
+                <div class="city-icon">ð³</div>
+                <div class="city-name">Chesapeake</div>
+                <div class="city-description">Suburban community with established neighborhoods and family homes</div>
+                <div class="city-link-btn">Learn More</div>
+            </a>
+
+            <!-- Hampton -->
+            <a href="/va/hampton/" class="city-card">
+                <div class="city-icon">ð </div>
+                <div class="city-name">Hampton</div>
+                <div class="city-description">The Blue Coastal city with a rich history and variety of residential properties</div>
+                <div class="city-link-btn">Learn More</div>
+            </a>
+
+            <!-- Newport News -->
+            <a href="/va/newport-news/" class="city-card">
+                <div class="city-icon">ðï¸</div>
+                <div class="city-name">Newport News</div>
+                <div class="city-description">Growing city with modern residential developments and opportunities</div>
+                <div class="city-link-btn">Learn More</div>
+            </a>
+
+            <!-- Portsmouth -->
+            <a href="/va/portsmouth/" class="city-card">
+                <div class="city-icon">ð</div>
+                <div class="city-name">Portsmouth</div>
+                <div class="city-description">Historic waterfront community with unique architectural styles</div>
+                <div class="city-link-btn">Learn More</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Coverage Section -->
+    <section class="coverage-section">
+        <h2>We Cover All of Hampton Roads</h2>
+        <div class="coverage-text">
+            <p>While we specialize in these six primary markets, Tidewater Property Rentals LLC also serves surrounding communities throughout the Hampton Roads region. Whether you're in a major city or a smaller community nearby, we're ready to provide you with a fair cash offer for your home. Our local expertise and rapid closing timeline make us the ideal choice for selling your property quickly.</p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to Sell Your Home?</h2>
+        <p>Get your free, no-obligation cash offer in minutes</p>
+        <a href="/contact/" class="cta-button">Get Started Today</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About</h3>
+                <p>Tidewater Property Rentals LLC is a trusted real estate investment company buying homes across Hampton Roads, Virginia. We help homeowners sell quickly for cash without hassle.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/how-it-works/">How It Works</a></li>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/our-company/">Our Company</a></li>
+                    <li><a href="/locations/">Locations</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/faq/">FAQ</a></li>
+                    <li><a href="/contact/">Contact Us</a></li>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><strong>Hampton Roads, Virginia</strong></p>
+                <p>Email: <a href="mailto:tom@vahomes.com">tom@vahomes.com</a></p>
+                <p style="margin-top: 1rem; font-size: 0.85rem;">Available Monday - Friday, 9am - 6pm EST</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tidewater Property Rentals LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script></body>
+</html>
