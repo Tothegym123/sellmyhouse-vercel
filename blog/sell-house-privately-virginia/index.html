@@ -16,17 +16,19 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; color: #333; line-height: 1.7; }
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background: #1a1a2e; position: sticky; top: 0; z-index: 1000; }
-        .logo { display: flex; align-items: center; }
-        .logo-tidewater { color: #e63946; font-weight: 700; font-size: 1.2em; }
-        .logo-homebuyerstext { color: white; font-weight: 500; font-size: 0.9em; }
-        .nav-links { display: flex; list-style: none; gap: 20px; align-items: center; }
-        .nav-links a { color: white; text-decoration: none; font-size: 0.95em; transition: color 0.3s; }
-        .nav-links a:hover { color: #e63946; }
-        .cta-button { background: #e63946; color: white !important; padding: 10px 20px; border-radius: 5px; font-weight: 600; }
-        .cta-button:hover { background: #c5303c; }
+        nav { background-color: var(--dark); padding: 1rem 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { text-decoration: none; display: flex; align-items: center; }
+        .logo-text { display: flex; flex-direction: column; }
+        .logo-main { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.3rem; color: white; letter-spacing: 2px; }
+        .logo-home { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.65rem; color: var(--accent); letter-spacing: 3px; text-transform: uppercase; }
+        .nav-links { display: flex; list-style: none; gap: 1.5rem; align-items: center; }
+        .nav-links a { color: white; text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+        .nav-cta { background: var(--accent); color: white !important; padding: 0.6rem 1.2rem; border-radius: 5px; font-weight: 600; transition: background 0.3s; text-decoration: none; }
+        .nav-cta:hover { background: var(--accent-hover); }
         .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
-        .hamburger span { width: 25px; height: 3px; background: white; }
+        .hamburger span { width: 25px; height: 3px; background: white; border-radius: 2px; }
         .blog-hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 80px 5% 60px; text-align: center; }
         .blog-hero h1 { font-size: 2.2em; margin-bottom: 15px; }
         .blog-hero .breadcrumb { font-size: 0.9em; opacity: 0.8; margin-bottom: 20px; }
@@ -53,7 +55,7 @@
         .footer-bottom { text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #333; font-size: 0.85em; }
         @media (max-width: 768px) {
             .hamburger { display: flex; }
-            .nav-links { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; right: 0; background: #1a1a2e; padding: 20px; }
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--dark); flex-direction: column; padding: 1rem; }
             .nav-links.active { display: flex; }
             .blog-hero h1 { font-size: 1.6em; }
             .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -62,22 +64,25 @@
 </head>
 <body>
     <nav>
-        <div class="logo">
-            <span class="logo-tidewater">TIDEWATER</span><span class="logo-homebuyerstext"> PROPERTY RENTALS LLC</span>
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <div class="logo-text">
+                    <span class="logo-main">TIDEWATER</span>
+                    <span class="logo-home">Property Rentals LLC</span>
+                </div>
+            </a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/how-it-works/">How It Works</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/contact/">Contact</a></li>
+                <li><a href="#get-offer" class="nav-cta">Get Cash Offer</a></li>
+            </ul>
         </div>
-        <div class="hamburger" id="hamburger">
-            <span></span><span></span><span></span>
-        </div>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="/">Home</a></li>
-            <li><a href="/how-it-works/">How It Works</a></li>
-            <li><a href="/about/">About</a></li>
-            <li><a href="/our-company/">Our Company</a></li>
-            <li><a href="/blog/">Blog</a></li>
-            <li><a href="/faq/">FAQ</a></li>
-            <li><a href="/contact/">Contact</a></li>
-            <li><a href="/contact/" class="cta-button">Get My Cash Offer</a></li>
-        </ul>
     </nav>
 
     <section class="blog-hero">
@@ -164,9 +169,8 @@
         </div>
     </footer>
     <script>
-        document.getElementById('hamburger').addEventListener('click', function() {
-            document.getElementById('navLinks').classList.toggle('active');
-        });
+        
     </script>
+<script>function toggleMenu() { document.querySelector('.nav-links').classList.toggle('active'); }</script>
 </body>
 </html>
