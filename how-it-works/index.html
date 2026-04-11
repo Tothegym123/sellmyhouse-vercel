@@ -39,6 +39,19 @@ setTimeout(_loadGTM,3500);
             color: var(--text);
             line-height: 1.6;
         }
+        nav { background-color: var(--dark); padding: 1rem 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { text-decoration: none; display: flex; align-items: center; }
+        .logo-text { display: flex; flex-direction: column; }
+        .logo-main { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.3rem; color: white; letter-spacing: 2px; }
+        .logo-home { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.65rem; color: var(--accent); letter-spacing: 3px; text-transform: uppercase; }
+        .nav-links { display: flex; list-style: none; gap: 1.5rem; align-items: center; }
+        .nav-links a { color: white; text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+        .nav-cta { background: var(--accent); color: white !important; padding: 0.6rem 1.2rem; border-radius: 5px; font-weight: 600; transition: background 0.3s; text-decoration: none; }
+        .nav-cta:hover { background: var(--accent-hover); }
+        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
+        .hamburger span { width: 25px; height: 3px; background: white; border-radius: 2px; }
 
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Montserrat', sans-serif;
@@ -51,98 +64,10 @@ setTimeout(_loadGTM,3500);
             padding: 0 20px;
         }
 
-        .navbar {
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
-        }
-
-        .logo {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 20px;
-            font-weight: 800;
-            color: var(--primary);
-            text-decoration: none;
-            letter-spacing: 1px;
-        }
-
-        .logo span {
-            color: var(--accent);
-            margin-left: 5px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text);
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent);
-        }
-
-        .cta-btn {
-            background-color: var(--accent) !important;
-            color: white !important;
-            padding: 12px 24px !important;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .cta-btn:hover {
-            background-color: var(--accent-hover) !important;
-        }
-
-        .mobile-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 28px;
-            cursor: pointer;
-            color: var(--primary);
-        }
-
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                right: 0;
-                flex-direction: column;
-                background-color: white;
-                padding: 20px;
-                gap: 15px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            }
-
-            .nav-links.show {
-                display: flex;
-            }
-
-            .mobile-toggle {
-                display: block;
-            }
+            .hamburger { display: flex; }
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--dark); flex-direction: column; padding: 1rem; }
+            .nav-links.active { display: flex; }
         }
 
         .hero-banner {
@@ -460,19 +385,25 @@ setTimeout(_loadGTM,3500);
 
     <link rel="canonical" href="https://sellmyhousefasthamptonroadsva.com/how-it-works/">\n    <meta property="og:type" content="website">\n    <meta property="og:title" content="How It Works | Sell Your House Fast in Virginia">\n    <meta property="og:description" content="Our simple 3-step process: request an offer, get a fair cash price, and close on your timeline. No repairs, no commissions, no fees.">\n    <meta property="og:url" content="https://sellmyhousefasthamptonroadsva.com/how-it-works/">\n    <meta property="og:site_name" content="Tidewater Property Rentals LLC">\n    <meta name="twitter:card" content="summary">\n    <meta name="twitter:title" content="How It Works | Sell Your House Fast in Virginia">\n    <meta name="twitter:description" content="Our simple 3-step process: request an offer, get a fair cash price, and close on your timeline. No repairs, no commissions, no fees.">\n</head>
 <body>
-    <nav class="navbar">
-        <div class="nav-inner">
-            <a href="/" class="logo">TIDEWATER<span> PROPERTY RENTALS LLC</span></a>
-            <div class="nav-links">
-                <a href="/how-it-works/">How It Works</a>
-                <a href="/about/">About</a>
-                <a href="/our-company/">Our Company</a>
-                <a href="/blog/">Blog</a>
-                <a href="/faq/">FAQ</a>
-                <a href="/contact/">Contact</a>
-                <a href="/contact/" class="cta-btn">Get My Cash Offer</a>
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <div class="logo-text">
+                    <span class="logo-main">TIDEWATER</span>
+                    <span class="logo-home">Property Rentals LLC</span>
+                </div>
+            </a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
             </div>
-            <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">â°</button>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/how-it-works/">How It Works</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/contact/">Contact</a></li>
+                <li><a href="#get-offer" class="nav-cta">Get Cash Offer</a></li>
+            </ul>
         </div>
     </nav>
 
@@ -664,5 +595,6 @@ setTimeout(_loadGTM,3500);
             });
         });
     </script>
+<script>function toggleMenu() { document.querySelector('.nav-links').classList.toggle('active'); }</script>
 </body>
 </html>
