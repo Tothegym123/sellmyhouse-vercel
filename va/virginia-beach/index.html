@@ -28,15 +28,6 @@ img{max-width:100%;height:auto}
 .container{max-width:1200px;margin:0 auto;padding:0 20px}
 
 /* NAV */
-.navbar{background:var(--white);padding:12px 0;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,.08)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:0 20px}
-.logo{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.4rem;color:var(--primary)}
-.logo span{color:var(--accent)}
-.nav-links{display:flex;gap:28px;align-items:center}
-.nav-links a{font-weight:600;font-size:.9rem;color:var(--text);transition:color .2s}
-.nav-links a:hover{color:var(--primary-light)}
-.cta-btn{display:inline-block;background:var(--accent);color:var(--white)!important;padding:12px 28px;border-radius:6px;font-weight:700;font-size:.95rem;transition:background .2s;border:none;cursor:pointer;font-family:'Montserrat',sans-serif}
-.cta-btn:hover{background:var(--accent-hover)}
 
 /* HERO */
 .hero{background:linear-gradient(rgba(26,82,118,.88),rgba(27,40,56,.92)),url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80') center/cover;padding:80px 0 60px;text-align:center;color:var(--white)}
@@ -45,7 +36,7 @@ img{max-width:100%;height:auto}
 .hero p{font-size:1.1rem;opacity:.92;margin-bottom:30px}
 .hero-form{max-width:520px;margin:0 auto 30px}
 .hero-form input{width:100%;padding:16px 20px;border:none;border-radius:6px;font-size:1rem;margin-bottom:12px;font-family:'Open Sans',sans-serif}
-.hero-form .cta-btn{width:100%;padding:16px;font-size:1.05rem}
+.hero-form
 .trust-row{display:flex;justify-content:center;align-items:center;gap:30px;flex-wrap:wrap;margin-top:20px;font-size:.95rem}
 .trust-item{display:flex;align-items:center;gap:8px}
 .stars{color:#f1c40f;font-size:1.2rem}
@@ -125,8 +116,8 @@ img{max-width:100%;height:auto}
 .cta-section p{opacity:.9;margin-bottom:30px;font-size:1.1rem}
 .cta-form{max-width:500px;margin:0 auto}
 .cta-form input{width:100%;padding:16px 20px;border:none;border-radius:6px;font-size:1rem;margin-bottom:12px;font-family:'Open Sans',sans-serif}
-.cta-form .cta-btn{width:100%;padding:16px;font-size:1.05rem;background:var(--accent)}
-.cta-form .cta-btn:hover{background:var(--accent-hover)}
+.cta-form
+.cta-form
 
 /* FAQ */
 .faq{padding:70px 0}
@@ -170,7 +161,6 @@ img{max-width:100%;height:auto}
 
 /* RESPONSIVE */
 @media(max-width:900px){
-.nav-links{display:none}
 .hero h1{font-size:2.2rem}
 .intro-grid,.hassle-free-inner,.compare-grid,.market-grid{grid-template-columns:1fr}
 .steps-grid{grid-template-columns:1fr}
@@ -190,19 +180,27 @@ img{max-width:100%;height:auto}
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar">
-<div class="nav-inner">
-<a href="/" class="logo">TIDEWATER<span> PROPERTY RENTALS LLC</span></a>
-<div class="nav-links">
-<a href="#how-it-works">How It Works</a>
-<a href="#about">About</a>
-<a href="#why-us">Why Us</a>
-<a href="#faq">FAQ</a>
-<a href="#contact">Contact</a>
-<a href="#contact" class="cta-btn">Get My Cash Offer</a>
-</div>
-</div>
-</nav>
+<nav>
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <div class="logo-text">
+                    <span class="logo-main">TIDEWATER</span>
+                    <span class="logo-home">Property Rentals LLC</span>
+                </div>
+            </a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/how-it-works/">How It Works</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/contact/">Contact</a></li>
+                <li><a href="#get-offer" class="nav-cta">Get Cash Offer</a></li>
+            </ul>
+        </div>
+    </nav>
 
 <!-- HERO -->
 <section class="hero">
@@ -691,6 +689,7 @@ function heroFormSubmit(){
                                                                                                                                                                                           }
                                                                                                                                                                                           </script>
                                                                                                                                                                                           
-                                                                                                                                                                                          </body>
+                                                                                                                                                                                          <script>function toggleMenu() { document.querySelector('.nav-links').classList.toggle('active'); }</script>
+</body>
                                                                                                                                                                                           </html>
                                                                                                                                                                                           >
