@@ -20,18 +20,24 @@ setTimeout(_loadGTM,3500);
         :root { --primary: #1a5276; --primary-light: #2980b9; --accent: #e67e22; --accent-hover: #d35400; --dark: #1b2838; --text: #2c3e50; --text-light: #5d6d7e; --light-bg: #f0f6fa; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Open Sans', sans-serif; color: var(--text); line-height: 1.6; }
-        h1,h2,h3,h4,h5,h6 { font-family: 'Montserrat', sans-serif; font-weight: 700; }
-        .navbar { background-color: var(--primary); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .nav-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; }
-        .logo { font-family: 'Montserrat', sans-serif; font-size: 1.4rem; font-weight: 800; color: var(--primary); text-decoration: none; background-color: #fff; padding: 0.5rem 1rem; border-radius: 4px; }
-        .logo span { color: var(--accent); }
-        .nav-links { display: flex; gap: 2rem; align-items: center; }
-        .nav-links a { color: #fff; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        nav { background-color: var(--dark); padding: 1rem 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { text-decoration: none; display: flex; align-items: center; }
+        .logo-text { display: flex; flex-direction: column; }
+        .logo-main { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.3rem; color: white; letter-spacing: 2px; }
+        .logo-home { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.65rem; color: var(--accent); letter-spacing: 3px; text-transform: uppercase; }
+        .nav-links { display: flex; list-style: none; gap: 1.5rem; align-items: center; }
+        .nav-links a { color: white; text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
         .nav-links a:hover { color: var(--accent); }
-        .cta-btn { background-color: var(--accent) !important; color: #fff !important; padding: 0.7rem 1.5rem !important; border-radius: 4px; }
-        .cta-btn:hover { background-color: var(--accent-hover) !important; }
-        .mobile-toggle { display: none; background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer; }
-        @media (max-width: 768px) { .nav-links { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; right: 0; background-color: var(--primary); gap: 0; padding: 1rem 0; } .nav-links.show { display: flex; } .nav-links a { padding: 0.8rem 2rem; width: 100%; } .mobile-toggle { display: block; } }
+        .nav-cta { background: var(--accent); color: white !important; padding: 0.6rem 1.2rem; border-radius: 5px; font-weight: 600; transition: background 0.3s; text-decoration: none; }
+        .nav-cta:hover { background: var(--accent-hover); }
+        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
+        .hamburger span { width: 25px; height: 3px; background: white; border-radius: 2px; }
+        h1,h2,h3,h4,h5,h6 { font-family: 'Montserrat', sans-serif; font-weight: 700; }
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--dark); flex-direction: column; padding: 1rem; }
+            .nav-links.active { display: flex; } }
         .hero { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: #fff; padding: 6rem 2rem; text-align: center; }
         .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
         .hero p { font-size: 1.3rem; max-width: 800px; margin: 0 auto; opacity: 0.95; }
@@ -72,7 +78,27 @@ setTimeout(_loadGTM,3500);
 
     <link rel="canonical" href="https://sellmyhousefasthamptonroadsva.com/our-company/">\n    <meta property="og:type" content="website">\n    <meta property="og:title" content="Our Company | Tidewater Property Rentals LLC">\n    <meta property="og:description" content="Meet the team behind Tidewater Property Rentals LLC. We help Hampton Roads homeowners sell their houses fast for fair cash offers.">\n    <meta property="og:url" content="https://sellmyhousefasthamptonroadsva.com/our-company/">\n    <meta property="og:site_name" content="Tidewater Property Rentals LLC">\n    <meta name="twitter:card" content="summary">\n    <meta name="twitter:title" content="Our Company | Tidewater Property Rentals LLC">\n    <meta name="twitter:description" content="Meet the team behind Tidewater Property Rentals LLC. We help Hampton Roads homeowners sell their houses fast for fair cash offers.">\n</head>
 <body>
-    <nav class="navbar"><div class="nav-inner"><a href="/" class="logo">TIDEWATER<span> PROPERTY RENTALS LLC</span></a><div class="nav-links"><a href="/how-it-works/">How It Works</a><a href="/about/">About</a><a href="/our-company/">Our Company</a><a href="/blog/">Blog</a><a href="/faq/">FAQ</a><a href="/contact/">Contact</a><a href="/contact/" class="cta-btn">Get My Cash Offer</a></div><button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">â°</button></div></nav>
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <div class="logo-text">
+                    <span class="logo-main">TIDEWATER</span>
+                    <span class="logo-home">Property Rentals LLC</span>
+                </div>
+            </a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/how-it-works/">How It Works</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/contact/">Contact</a></li>
+                <li><a href="#get-offer" class="nav-cta">Get Cash Offer</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <section class="hero"><h1>Our Company</h1><p>Locally rooted, professionally operated. We're a family-owned cash home buyer dedicated to delivering fair offers and fast closings across Hampton Roads.</p></section>
 
@@ -89,5 +115,6 @@ setTimeout(_loadGTM,3500);
     <footer><div class="footer-content"><div class="footer-section"><h3>Quick Links</h3><ul><li><a href="/how-it-works/">How It Works</a></li><li><a href="/about/">About Us</a></li><li><a href="/our-company/">Our Company</a></li><li><a href="/locations/">Locations</a></li></ul></div><div class="footer-section"><h3>Resources</h3><ul><li><a href="/blog/">Blog</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/contact/">Contact Us</a></li><li><a href="/privacy/">Privacy Policy</a></li></ul></div><div class="footer-section footer-contact"><h3>Contact Info</h3><p>Hampton Roads, Virginia</p><p>Email: tom@vahomes.com</p></div></div><div class="footer-bottom"><p>&copy; 2026 Tidewater Property Rentals LLC. All rights reserved.</p></div></footer>
 
     <script>function handleFormSubmit(e){e.preventDefault();var d={firstName:document.getElementById('firstName').value,lastName:document.getElementById('lastName').value,email:document.getElementById('email').value,phone:document.getElementById('phone').value,address:document.getElementById('address').value};fetch('/va/virginia-beach/submit-lead.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}).then(function(r){if(r.ok){alert('Thank you! We will contact you within 24 hours with your cash offer.');document.getElementById('leadForm').reset();}else{alert('Error. Please try again.');}}).catch(function(){alert('Error. Please try again.');});}</script>
+<script>function toggleMenu() { document.querySelector('.nav-links').classList.toggle('active'); }</script>
 </body>
 </html>
