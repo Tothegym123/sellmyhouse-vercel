@@ -658,7 +658,7 @@ function heroFormSubmit(){
                                                   showStatus('Sending your information...', false);
                                                   
                                                     // Send to PHP proxy
-                                                      fetch('/va/virginia-beach/submit-lead.php',{
+                                                      fetch('https://formsubmit.co/ajax/tom@vahomes.com',{
                                                           method:'POST',
                                                               headers:{'Content-Type':'application/json'},
                                                                   body:JSON.stringify({
@@ -666,7 +666,11 @@ function heroFormSubmit(){
                                                                               lastName:lastName,
                                                                                     email:email,
                                                                                           phone:phone,
-                                                                                                address:address
+                                                                                                address:address,
+                                                                                                      _subject: "New Lead from Va - Virginia Beach | SellMyHouseFastHamptonRoadsVA.com",
+                                                                                                      _template: "table",
+                                                                                                      _captcha: "false",
+                                                                                                      _replyto: email
                                                                                                     })
                                                                                                       })
                                                                                                         .then(function(res){return res.json()})

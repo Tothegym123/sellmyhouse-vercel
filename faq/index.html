@@ -431,7 +431,7 @@ setTimeout(_loadGTM,3500);
     <section class="cta-section">
         <h2>Still Have Questions?</h2>
         <p>Get in touch with our team. We're here to answer any questions and provide your free cash offer.</p>
-        <form class="quick-form" method="POST" action="/va/virginia-beach/submit-lead.php">
+        <form class="quick-form" method="POST" action="https://formsubmit.co/ajax/tom@vahomes.com">
             <div class="form-group">
                 <input type="text" name="firstName" placeholder="First Name" required>
                 <input type="text" name="lastName" placeholder="Last Name" required>
@@ -520,7 +520,13 @@ setTimeout(_loadGTM,3500);
                 phone: document.querySelector('input[name="phone"]').value,
                 address: document.querySelector('input[name="address"]').value
             };
-            fetch('/va/virginia-beach/submit-lead.php', {
+
+            formData._subject = "New Lead from Faq | SellMyHouseFastHamptonRoadsVA.com";
+            formData._template = "table";
+            formData._captcha = "false";
+            formData._replyto = formData.email || "";
+
+            fetch('https://formsubmit.co/ajax/tom@vahomes.com', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

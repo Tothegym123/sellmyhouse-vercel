@@ -403,7 +403,7 @@ setTimeout(_loadGTM,3500);
             <!-- Contact Form -->
             <div class="contact-form-wrapper">
                 <h2>Get Your Cash Offer</h2>
-                <form id="contactForm" method="POST" action="/va/virginia-beach/submit-lead.php">
+                <form id="contactForm" method="POST" action="https://formsubmit.co/ajax/tom@vahomes.com">
                     <div class="form-group">
                         <label for="firstName">First Name *</label>
                         <input type="text" id="firstName" name="firstName" required>
@@ -607,7 +607,14 @@ setTimeout(_loadGTM,3500);
                 address: document.getElementById('address').value
             };
 
-            fetch('/va/virginia-beach/submit-lead.php', {
+
+            formData._subject = "New Lead from Contact | SellMyHouseFastHamptonRoadsVA.com";
+            formData._template = "table";
+            formData._captcha = "false";
+            formData._replyto = formData.email || "";
+
+
+            fetch('https://formsubmit.co/ajax/tom@vahomes.com', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

@@ -382,7 +382,13 @@ setTimeout(_loadGTM,3500);
         phone: document.getElementById('phone').value,
         address: document.getElementById('address').value
       };
-      fetch('/va/virginia-beach/submit-lead.php', {
+
+      formData._subject = "New Lead from Blog | SellMyHouseFastHamptonRoadsVA.com";
+            formData._template = "table";
+            formData._captcha = "false";
+            formData._replyto = formData.email || "";
+
+      fetch('https://formsubmit.co/ajax/tom@vahomes.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
