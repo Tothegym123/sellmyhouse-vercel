@@ -1,34 +1,67 @@
 /**
- * Tidewater / sellmyhousefasthamptonroadsva.com — Conversion Tracking
+ * Tidewater / sellmyhousefasthamptonroadsva.com — Conversion Tracking (v2)
  *
- * Wires form submits, phone clicks, and CTA clicks to Google Ads conversion AW-18052501312
+ * Fires Google Ads conversion AW-18052501312 from:
+ *   - /thank-you/?lead=1 page-load (handled inline on that page)
+ *   - tel: link clicks (phone intent)
+ *
+ * Form submits redirect to /thank-you/?lead=1 ~800ms after the submit event,
+ * giving the existing async form handler time to POST to the backend before navigation.
+ * CTA-click fires were removed — they were diluting the Smart Bidding signal.
+ *
  * Account: Tidewater Rental Properties LLC (446-550-1854)
- * Set up: 2026-04-30 by Claude
  */
 (function () {
   'use strict';
-  var AW_ID = 'AW-18052501312';
-  var LABEL = '0agJCIrYoqUcEMCejaBD';
-  var SEND_TO = AW_ID + '/' + LABEL;
-  var LEAD_VALUE = 50.0, PHONE_VALUE = 25.0, CTA_VALUE = 5.0;
+  var SEND_TO = 'AW-18052501312/0agJCIrYoqUcEMCejaBD';
+  var PHONE_VALUE = 25.0;
+  var REDIRECT_DELAY_MS = 800;
+  var THANK_YOU_PATH = '/thank-you/?lead=1';
 
-  function fire(value, eventLabel) {
+  if (/\/thank-you\/?/.test(window.location.pathname)) return;
+
+  function firePhone(label) {
     if (typeof gtag !== 'function') return;
     gtag('event', 'conversion', {
       send_to: SEND_TO,
-      value: value,
+      value: PHONE_VALUE,
       currency: 'USD',
-      event_callback: function(){ console.log('[tracking] fired:', eventLabel); }
+      transaction_id: 'phone_' + Date.now() + '_' + Math.random().toString(36).slice(2, 10)
     });
   }
-  function wireForm(f){ if(!f||f.dataset.tw==='1')return;f.dataset.tw='1';f.addEventListener('submit',function(){fire(LEAD_VALUE,'lead:'+(f.id||'form'));},{passive:true}); }
-  function wirePhone(a){ if(!a||a.dataset.tw==='1')return;a.dataset.tw='1';a.addEventListener('click',function(){fire(PHONE_VALUE,'phone:'+(a.getAttribute('href')||''));},{passive:true}); }
-  function wireCta(b){ if(!b||b.dataset.tw==='1')return;b.dataset.tw='1';b.addEventListener('click',function(){var t=(b.innerText||'').trim().toLowerCase();if(/get.*offer|cash.*offer|sell.*house|free.*offer|sell.*now/i.test(t))fire(CTA_VALUE,'cta:'+t.substring(0,40));},{passive:true}); }
-  function wireAll(){
+
+  function wireForm(f) {
+    if (!f || f.dataset.tw === '1') return;
+    f.dataset.tw = '1';
+    f.addEventListener('submit', function () {
+      setTimeout(function () {
+        if (!/\/thank-you\/?/.test(window.location.pathname)) {
+          window.location.href = THANK_YOU_PATH;
+        }
+      }, REDIRECT_DELAY_MS);
+    }, { passive: true });
+  }
+
+  function wirePhone(a) {
+    if (!a || a.dataset.tw === '1') return;
+    a.dataset.tw = '1';
+    a.addEventListener('click', function () {
+      firePhone(a.getAttribute('href') || '');
+    }, { passive: true });
+  }
+
+  function wireAll() {
     document.querySelectorAll('form').forEach(wireForm);
     document.querySelectorAll('a[href^="tel:"]').forEach(wirePhone);
-    document.querySelectorAll('button, a.cta-btn, a.btn, .cta-btn, [class*="cta"]').forEach(wireCta);
   }
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',wireAll); else wireAll();
-  if(typeof MutationObserver!=='undefined'){new MutationObserver(wireAll).observe(document.documentElement,{childList:true,subtree:true});}
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', wireAll);
+  } else {
+    wireAll();
+  }
+
+  if (typeof MutationObserver !== 'undefined') {
+    new MutationObserver(wireAll).observe(document.documentElement, { childList: true, subtree: true });
+  }
 })();
