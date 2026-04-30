@@ -126,5 +126,6 @@ setTimeout(_loadGTM,3500);
 
     <script>function handleFormSubmit(e){e.preventDefault();var d={firstName:document.getElementById('firstName').value,lastName:document.getElementById('lastName').value,email:document.getElementById('email').value,phone:document.getElementById('phone').value,address:document.getElementById('address').value};fetch('https://formsubmit.co/ajax/tom@vahomes.com',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}).then(function(r){if(r.ok){alert('Thank you! We will contact you within 24 hours with your cash offer.');document.getElementById('leadForm').reset();}else{alert('Error. Please try again.');}}).catch(function(){alert('Error. Please try again.');});}</script>
 <script>function toggleMenu() { document.querySelector('.nav-links').classList.toggle('active'); }</script>
+<script src="/tracking.js" defer></script>
 </body>
 </html>
