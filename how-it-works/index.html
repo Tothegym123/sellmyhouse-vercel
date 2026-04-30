@@ -487,8 +487,12 @@ setTimeout(_loadGTM,3500);
       ]
     }
     </script>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&display=swap"></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel="stylesheet"" media="print" onload="this.media='all'">
+  <noscript><link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"></noscript>
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&display=swap"></noscript></noscript>
+
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1556745753-b2904692b3cd?auto=format&fit=crop&w=800&q=80" fetchpriority="high">
 </head>
 <body>
     <nav>
@@ -530,7 +534,7 @@ setTimeout(_loadGTM,3500);
                     <p>We work with homeowners across <a href="/va/virginia-beach/" style="color:var(--primary-light);">Virginia Beach</a>, <a href="/va/chesapeake/" style="color:var(--primary-light);">Chesapeake</a>, <a href="/va/norfolk/" style="color:var(--primary-light);">Norfolk</a>, <a href="/va/hampton/" style="color:var(--primary-light);">Hampton</a>, <a href="/va/newport-news/" style="color:var(--primary-light);">Newport News</a>, and <a href="/va/portsmouth/" style="color:var(--primary-light);">Portsmouth</a>. Whether you are facing foreclosure, dealing with an inherited property, going through a divorce, relocating for work, or simply ready for a fresh start &mdash; we are here to help.</p>
                 </div>
                 <div class="step-image">
-                    <img src="https://images.unsplash.com/photo-1556745753-b2904692b3cd?auto=format&fit=crop&w=800&q=80"
+                    <img fetchpriority="high" loading="eager" decoding="async" width="800" height="534" src="https://images.unsplash.com/photo-1556745753-b2904692b3cd?auto=format&fit=crop&w=800&q=80"
                          srcset="https://images.unsplash.com/photo-1556745753-b2904692b3cd?auto=format&fit=crop&w=600&q=75 600w, https://images.unsplash.com/photo-1556745753-b2904692b3cd?auto=format&fit=crop&w=800&q=80 800w, https://images.unsplash.com/photo-1556745753-b2904692b3cd?auto=format&fit=crop&w=1200&q=80 1200w"
                          sizes="(max-width: 768px) 100vw, 50vw"
                          alt="Homeowner calling Tidewater Property Rentals to request a cash offer on their Hampton Roads home"
