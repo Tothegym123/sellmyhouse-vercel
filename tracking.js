@@ -1,20 +1,22 @@
 /**
- * Tidewater / sellmyhousefasthamptonroadsva.com — Conversion Tracking (v2)
+ * Tidewater / sellmyhousefasthamptonroadsva.com — Conversion + Analytics Tracking (v3)
  *
- * Fires Google Ads conversion AW-18052501312 from:
- *   - /thank-you/?lead=1 page-load (handled inline on that page)
- *   - tel: link clicks (phone intent)
+ * Fires:
+ *   - Google Ads phone-click conversion (AW-18052501312/0agJCIrYoqUcEMCejaBD, $25)
+ *   - GA4 phone_click event (key event in Sell My House Fast Hampton Roads property)
+ *   - GA4 generate_lead event on form submit (key event)
+ *   - Form-submit → /thank-you/?lead=1 redirect (gives the async backend POST time to land)
+ *   - Thank-you page-load Ads conversion is handled inline on /thank-you/.
  *
- * Form submits redirect to /thank-you/?lead=1 ~800ms after the submit event,
- * giving the existing async form handler time to POST to the backend before navigation.
- * CTA-click fires were removed — they were diluting the Smart Bidding signal.
- *
- * Account: Tidewater Rental Properties LLC (446-550-1854)
+ * GA4 property: G-4FGQ3T9CX5 (Sell My House Fast Hampton Roads)
+ * Google Ads account: AW-18052501312 (Tidewater Rental Properties LLC)
  */
 (function () {
   'use strict';
-  var SEND_TO = 'AW-18052501312/0agJCIrYoqUcEMCejaBD';
+  var ADS_PHONE_SEND_TO = 'AW-18052501312/0agJCIrYoqUcEMCejaBD';
+  var GA4_ID = 'G-4FGQ3T9CX5';
   var PHONE_VALUE = 25.0;
+  var LEAD_VALUE = 50.0;
   var REDIRECT_DELAY_MS = 800;
   var THANK_YOU_PATH = '/thank-you/?lead=1';
 
@@ -22,11 +24,44 @@
 
   function firePhone(label) {
     if (typeof gtag !== 'function') return;
+    var txid = 'phone_' + Date.now() + '_' + Math.random().toString(36).slice(2, 10);
+    // Google Ads conversion (existing behavior — Smart Bidding signal)
     gtag('event', 'conversion', {
-      send_to: SEND_TO,
+      send_to: ADS_PHONE_SEND_TO,
       value: PHONE_VALUE,
       currency: 'USD',
-      transaction_id: 'phone_' + Date.now() + '_' + Math.random().toString(36).slice(2, 10)
+      transaction_id: txid
+    });
+    // GA4 phone_click event (new — feeds Engagement & Key Events reports)
+    gtag('event', 'phone_click', {
+      send_to: GA4_ID,
+      phone_number: (label || '').replace(/^tel:/, ''),
+      page_location: window.location.href,
+      page_path: window.location.pathname,
+      value: PHONE_VALUE,
+      currency: 'USD'
+    });
+  }
+
+  function fireFormLead(form) {
+    if (typeof gtag !== 'function') return;
+    var formId = (form && (form.id || form.name)) || 'unknown';
+    var formAction = (form && form.getAttribute('action')) || '';
+    // GA4 generate_lead event (the canonical GA4 lead event)
+    gtag('event', 'generate_lead', {
+      send_to: GA4_ID,
+      form_id: formId,
+      form_action: formAction,
+      page_location: window.location.href,
+      page_path: window.location.pathname,
+      value: LEAD_VALUE,
+      currency: 'USD'
+    });
+    // Also fire a clean form_submit event (auto-collected sometimes, but explicit is safer)
+    gtag('event', 'form_submit', {
+      send_to: GA4_ID,
+      form_id: formId,
+      page_path: window.location.pathname
     });
   }
 
@@ -34,6 +69,7 @@
     if (!f || f.dataset.tw === '1') return;
     f.dataset.tw = '1';
     f.addEventListener('submit', function () {
+      try { fireFormLead(f); } catch (e) {}
       setTimeout(function () {
         if (!/\/thank-you\/?/.test(window.location.pathname)) {
           window.location.href = THANK_YOU_PATH;
