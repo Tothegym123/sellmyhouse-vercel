@@ -318,7 +318,12 @@ setTimeout(_loadGTM,3500);
                 font-size: 1.8rem;
             }
         }
-    </style>
+            .nav-tel { display: inline-flex; align-items: center; gap: 0.35rem; font-weight: 700; color: var(--accent, #e67e22); text-decoration: none; padding: 0.6rem 0.9rem; border-radius: 5px; transition: background 0.2s; }
+        .nav-tel:hover { background: rgba(230,126,34,0.08); }
+        @media (max-width: 768px) { .nav-tel { padding: 0.5rem 0.6rem; font-size: 0.95rem; } }
+        .footer-tel { color: var(--accent, #e67e22); font-weight: 600; text-decoration: none; }
+        .footer-tel:hover { text-decoration: underline; }
+</style>
 
     <link rel="canonical" href="https://sellmyhousefasthamptonroadsva.com/about/">
     <meta property="og:type" content="website">
@@ -350,6 +355,7 @@ setTimeout(_loadGTM,3500);
                 <li><a href="/about/">About</a></li>
                 <li><a href="/blog/">Blog</a></li>
                 <li><a href="/contact/">Contact</a></li>
+                <li><a href="tel:+17574272274" class="nav-tel">📞 (757) 427-2274</a></li>
                 <li><a href="#get-offer" class="nav-cta">Get Cash Offer</a></li>
             </ul>
         </div>
@@ -473,7 +479,8 @@ setTimeout(_loadGTM,3500);
             <div class="footer-section footer-contact">
                 <h3>Contact Info</h3>
                 <p>Hampton Roads, Virginia</p>
-                <p>Email: tom@vahomes.com</p>
+                <p><a href="tel:+17574272274" class="footer-tel">📞 (757) 427-2274</a></p>
+                    <p>Email: tom@vahomes.com</p>
             </div>
         </div>
         <div class="footer-bottom">

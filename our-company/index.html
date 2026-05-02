@@ -73,7 +73,12 @@ setTimeout(_loadGTM,3500);
         .footer-section a:hover { color: var(--accent); }
         .footer-contact p { margin-bottom: 0.8rem; color: #bbb; }
         .footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 2rem; border-top: 1px solid #444; text-align: center; color: #999; font-size: 0.9rem; }
-    </style>
+            .nav-tel { display: inline-flex; align-items: center; gap: 0.35rem; font-weight: 700; color: var(--accent, #e67e22); text-decoration: none; padding: 0.6rem 0.9rem; border-radius: 5px; transition: background 0.2s; }
+        .nav-tel:hover { background: rgba(230,126,34,0.08); }
+        @media (max-width: 768px) { .nav-tel { padding: 0.5rem 0.6rem; font-size: 0.95rem; } }
+        .footer-tel { color: var(--accent, #e67e22); font-weight: 600; text-decoration: none; }
+        .footer-tel:hover { text-decoration: underline; }
+</style>
 
     <link rel="canonical" href="https://sellmyhousefasthamptonroadsva.com/our-company/">
     <meta property="og:type" content="website">
@@ -105,6 +110,7 @@ setTimeout(_loadGTM,3500);
                 <li><a href="/about/">About</a></li>
                 <li><a href="/blog/">Blog</a></li>
                 <li><a href="/contact/">Contact</a></li>
+                <li><a href="tel:+17574272274" class="nav-tel">📞 (757) 427-2274</a></li>
                 <li><a href="#get-offer" class="nav-cta">Get Cash Offer</a></li>
             </ul>
         </div>
@@ -122,7 +128,8 @@ setTimeout(_loadGTM,3500);
 
     <section class="cta-section"><h2>Let's Work Together</h2><p>Whether you're facing a challenging situation or simply ready to move on, we're here to help.</p><div class="form-container"><form id="leadForm" onsubmit="handleFormSubmit(event)"><div class="form-group"><label for="firstName">First Name</label><input type="text" id="firstName" name="firstName" required></div><div class="form-group"><label for="lastName">Last Name</label><input type="text" id="lastName" name="lastName" required></div><div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" required></div><div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" required></div><div class="form-group"><label for="address">Property Address</label><input type="text" id="address" name="address" required></div><button type="submit" class="submit-btn">Get My Cash Offer</button></form></div></section>
 
-    <footer><div class="footer-content"><div class="footer-section"><h3>Quick Links</h3><ul><li><a href="/how-it-works/">How It Works</a></li><li><a href="/about/">About Us</a></li><li><a href="/our-company/">Our Company</a></li><li><a href="/locations/">Locations</a></li></ul></div><div class="footer-section"><h3>Resources</h3><ul><li><a href="/blog/">Blog</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/contact/">Contact Us</a></li><li><a href="/privacy/">Privacy Policy</a></li></ul></div><div class="footer-section footer-contact"><h3>Contact Info</h3><p>Hampton Roads, Virginia</p><p>Email: tom@vahomes.com</p></div></div><div class="footer-bottom"><p>&copy; 2026 Tidewater Property Rentals LLC. All rights reserved.</p></div></footer>
+    <footer><div class="footer-content"><div class="footer-section"><h3>Quick Links</h3><ul><li><a href="/how-it-works/">How It Works</a></li><li><a href="/about/">About Us</a></li><li><a href="/our-company/">Our Company</a></li><li><a href="/locations/">Locations</a></li></ul></div><div class="footer-section"><h3>Resources</h3><ul><li><a href="/blog/">Blog</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/contact/">Contact Us</a></li><li><a href="/privacy/">Privacy Policy</a></li></ul></div><div class="footer-section footer-contact"><h3>Contact Info</h3><p>Hampton Roads, Virginia</p><p><a href="tel:+17574272274" class="footer-tel">📞 (757) 427-2274</a></p>
+                    <p>Email: tom@vahomes.com</p></div></div><div class="footer-bottom"><p>&copy; 2026 Tidewater Property Rentals LLC. All rights reserved.</p></div></footer>
 
     <script>function handleFormSubmit(e){e.preventDefault();var d={firstName:document.getElementById('firstName').value,lastName:document.getElementById('lastName').value,email:document.getElementById('email').value,phone:document.getElementById('phone').value,address:document.getElementById('address').value};fetch('https://formsubmit.co/ajax/tom@vahomes.com',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}).then(function(r){if(r.ok){alert('Thank you! We will contact you within 24 hours with your cash offer.');document.getElementById('leadForm').reset();}else{alert('Error. Please try again.');}}).catch(function(){alert('Error. Please try again.');});}</script>
 <script>function toggleMenu() { document.querySelector('.nav-links').classList.toggle('active'); }</script>
