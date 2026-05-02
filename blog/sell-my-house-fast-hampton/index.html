@@ -74,6 +74,19 @@
             .nav-tel { display: inline-flex; align-items: center; gap: 0.35rem; font-weight: 700; color: var(--accent, #e67e22); text-decoration: none; padding: 0.6rem 0.9rem; border-radius: 5px; transition: background 0.2s; }
         .nav-tel:hover { background: rgba(230,126,34,0.08); }
         @media (max-width: 768px) { .nav-tel { padding: 0.5rem 0.6rem; font-size: 0.95rem; } }
+        .has-dropdown { position: relative; }
+        .dropdown-toggle { cursor: pointer; }
+        .dropdown { display: none; position: absolute; top: 100%; left: 0; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.12); border-radius: 8px; padding: 0.5rem 0; min-width: 280px; list-style: none; z-index: 100; margin-top: 0.5rem; }
+        .has-dropdown:hover .dropdown, .has-dropdown:focus-within .dropdown { display: block; }
+        .dropdown li { padding: 0; }
+        .dropdown li a { display: block; padding: 0.6rem 1rem; color: #2c3e50; text-decoration: none; font-weight: 500; transition: background 0.15s; }
+        .dropdown li a:hover { background: #f0f6fa; color: var(--accent, #e67e22); }
+        @media (max-width: 768px) {
+          .dropdown { position: static; box-shadow: none; padding: 0; margin: 0; min-width: 0; }
+          .has-dropdown:hover .dropdown { display: none; }
+          .has-dropdown.open .dropdown { display: block; }
+          .dropdown li a { padding: 0.5rem 1rem; }
+        }
 </style>
     <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Sell My House Fast Hampton: Cash Buyer Guide", "description": "Sell my house fast Hampton \u2014 Tidewater buys Hampton VA houses for cash. Any condition, no repairs, no fees, close in 7 days. Free cash offer today.", "image": "/images/1570129477492-45c003edd2be.jpg", "author": {"@type": "Organization", "name": "Tidewater Property Rentals LLC"}, "publisher": {"@type": "Organization", "name": "Tidewater Property Rentals LLC", "logo": {"@type": "ImageObject", "url": "https://sellmyhousefasthamptonroadsva.com/favicon.ico"}}, "datePublished": "2026-04-15", "dateModified": "2026-04-15", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://sellmyhousefasthamptonroadsva.com/blog/sell-my-house-fast-hampton"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sellmyhousefasthamptonroadsva.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://sellmyhousefasthamptonroadsva.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Sell My House Fast Hampton: Cash Buyer Guide", "item": "https://sellmyhousefasthamptonroadsva.com/blog/sell-my-house-fast-hampton"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How fast can I sell my house in Hampton VA?", "acceptedAnswer": {"@type": "Answer", "text": "With Tidewater Property Rentals, you can close on your Hampton home in as little as 7 days. A traditional Hampton MLS listing typically takes 4-6 months because Hampton inventory moves slower than Virginia Beach or Norfolk."}}, {"@type": "Question", "name": "Do you buy old houses in Hampton?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We specialize in older Hampton homes \u2014 Phoebus, Wythe, Buckroe, and other historic neighborhoods. Many Hampton homes won't qualify for FHA/VA financing due to age or condition, but we buy them all for cash."}}, {"@type": "Question", "name": "Can you close before my Langley AFB PCS date?", "acceptedAnswer": {"@type": "Answer", "text": "Almost always. If you tell us your PCS date, we'll work backwards to make sure closing happens before you leave. We've helped many Langley families sell in 10-14 days around PCS timelines."}}, {"@type": "Question", "name": "What if my Hampton house has code violations?", "acceptedAnswer": {"@type": "Answer", "text": "No problem. We buy Hampton houses with active code violations, condemnation orders, or city enforcement actions. You don't need to fix anything \u2014 we handle everything after closing."}}, {"@type": "Question", "name": "Do you buy houses in Buckroe Beach, Phoebus, or Fox Hill?", "acceptedAnswer": {"@type": "Answer", "text": "Yes \u2014 we buy in every Hampton neighborhood, including Buckroe Beach, Phoebus, Fox Hill, Wythe, Willow Oaks, Riverdale, Aberdeen Gardens, and more. If you're inside Hampton city limits, we want to make you an offer."}}]}]}</script>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel="stylesheet"" media="print" onload="this.media='all'">
@@ -100,6 +113,18 @@
                 <li><a href="/blog/">Blog</a></li>
                 <li><a href="/contact/">Contact</a></li>
                 <li><a href="tel:+17574272274" class="nav-tel">📞 (757) 427-2274</a></li>
+                                <li class="has-dropdown">
+                    <a href="/locations/" class="dropdown-toggle">Areas We Serve <span aria-hidden="true">▾</span></a>
+                    <ul class="dropdown">
+                        <li><a href="/va/virginia-beach/">Sell My House Fast in Virginia Beach VA</a></li>
+                        <li><a href="/va/norfolk/">Sell My House Fast in Norfolk VA</a></li>
+                        <li><a href="/va/chesapeake/">Sell My House Fast in Chesapeake VA</a></li>
+                        <li><a href="/va/suffolk/">Sell My House Fast in Suffolk VA</a></li>
+                        <li><a href="/va/portsmouth/">Sell My House Fast in Portsmouth VA</a></li>
+                        <li><a href="/va/hampton/">Sell My House Fast in Hampton VA</a></li>
+                        <li><a href="/va/newport-news/">Sell My House Fast in Newport News VA</a></li>
+                    </ul>
+                </li>
                 <li><a href="#get-offer" class="nav-cta">Get Cash Offer</a></li>
             </ul>
         </div>
@@ -139,7 +164,7 @@
         </ul>
 
         <h2>Hampton Cash Sale vs Traditional Listing</h2>
-        <p>A Hampton MLS listing averages 60-120 days on market (slower than Virginia Beach or Norfolk) plus 30-45 days for buyer financing. That's 3-6 months minimum, and many sales fall through when inspection flags old Hampton homes for financing issues.</p>
+        <p>A Hampton MLS listing averages 60-120 days on market (slower than <a href="/va/virginia-beach/">Virginia Beach</a> or <a href="/va/norfolk/">Norfolk</a>) plus 30-45 days for buyer financing. That's 3-6 months minimum, and many sales fall through when inspection flags old Hampton homes for financing issues.</p>
 
         <h3>Tidewater Cash Sale Timeline</h3>
         <ul>
@@ -163,7 +188,7 @@
         </ul>
 
         <h2>What Hampton Neighborhoods Do We Buy In?</h2>
-        <p>We buy throughout Hampton, including Phoebus, Wythe, Buckroe Beach, Fox Hill, Willow Oaks, Michaels Woods, Riverdale, Pasture Point, Old Wythe, Chesapeake Landing, Greenbriar, Farmington, Tide Mill, Northampton, Aberdeen Gardens, Victoria Boulevard, Hampton Roads Center, and Newmarket. If it's in Hampton city limits, we want to talk.</p>
+        <p>We buy throughout Hampton, including Phoebus, Wythe, Buckroe Beach, Fox Hill, Willow Oaks, Michaels Woods, Riverdale, Pasture Point, Old Wythe, <a href="/va/chesapeake/">Chesapeake</a> Landing, Greenbriar, Farmington, Tide Mill, Northampton, Aberdeen Gardens, Victoria Boulevard, Hampton Roads Center, and Newmarket. If it's in Hampton city limits, we want to talk.</p>
 
         <h2>How Much Will a Cash Buyer Pay for Your Hampton Home?</h2>
         <p>Cash offers in Hampton typically land between 68% and 82% of after-repair value. Hampton prices tend to be lower than Virginia Beach, which means the dollar differences are smaller Ã¢ÂÂ but the percentage math is similar.</p>
@@ -241,7 +266,17 @@
                 <p style="font-size:0.9em;">Phone: <a href="tel:7574272274">(757) 427-2274</a></p>
                 <p style="font-size:0.9em;">Email: <a href="mailto:tom@vahomes.com">tom@vahomes.com</a></p>
             </div>
-        </div>
+                <div class="footer-links">
+                    <h4>Areas We Serve</h4>
+                    <a href="/va/virginia-beach/">Sell My House Fast in Virginia Beach VA</a>
+                    <a href="/va/norfolk/">Sell My House Fast in Norfolk VA</a>
+                    <a href="/va/chesapeake/">Sell My House Fast in Chesapeake VA</a>
+                    <a href="/va/suffolk/">Sell My House Fast in Suffolk VA</a>
+                    <a href="/va/portsmouth/">Sell My House Fast in Portsmouth VA</a>
+                    <a href="/va/hampton/">Sell My House Fast in Hampton VA</a>
+                    <a href="/va/newport-news/">Sell My House Fast in Newport News VA</a>
+                </div>
+            </div>
         <div class="footer-bottom">&copy; 2026 Tidewater Property Rentals LLC. All rights reserved.</div>
     </footer>
     <script>function toggleMenu(){document.querySelector('.nav-links').classList.toggle('active');}</script>

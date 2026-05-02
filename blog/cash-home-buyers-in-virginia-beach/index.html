@@ -74,6 +74,19 @@
             .nav-tel { display: inline-flex; align-items: center; gap: 0.35rem; font-weight: 700; color: var(--accent, #e67e22); text-decoration: none; padding: 0.6rem 0.9rem; border-radius: 5px; transition: background 0.2s; }
         .nav-tel:hover { background: rgba(230,126,34,0.08); }
         @media (max-width: 768px) { .nav-tel { padding: 0.5rem 0.6rem; font-size: 0.95rem; } }
+        .has-dropdown { position: relative; }
+        .dropdown-toggle { cursor: pointer; }
+        .dropdown { display: none; position: absolute; top: 100%; left: 0; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.12); border-radius: 8px; padding: 0.5rem 0; min-width: 280px; list-style: none; z-index: 100; margin-top: 0.5rem; }
+        .has-dropdown:hover .dropdown, .has-dropdown:focus-within .dropdown { display: block; }
+        .dropdown li { padding: 0; }
+        .dropdown li a { display: block; padding: 0.6rem 1rem; color: #2c3e50; text-decoration: none; font-weight: 500; transition: background 0.15s; }
+        .dropdown li a:hover { background: #f0f6fa; color: var(--accent, #e67e22); }
+        @media (max-width: 768px) {
+          .dropdown { position: static; box-shadow: none; padding: 0; margin: 0; min-width: 0; }
+          .has-dropdown:hover .dropdown { display: none; }
+          .has-dropdown.open .dropdown { display: block; }
+          .dropdown li a { padding: 0.5rem 1rem; }
+        }
 </style>
     <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Cash Home Buyers in Virginia Beach: Sell Your House for Cash", "description": "Cash home buyers in Virginia Beach \u2014 Tidewater buys houses for cash in any condition. No repairs, no fees, close in 7 days. Free offer in 24 hours.", "image": "/images/1507525428034-b723cf961d3e.jpg", "author": {"@type": "Organization", "name": "Tidewater Property Rentals LLC"}, "publisher": {"@type": "Organization", "name": "Tidewater Property Rentals LLC", "logo": {"@type": "ImageObject", "url": "https://sellmyhousefasthamptonroadsva.com/favicon.ico"}}, "datePublished": "2026-04-13", "dateModified": "2026-04-15", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://sellmyhousefasthamptonroadsva.com/blog/cash-home-buyers-in-virginia-beach"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sellmyhousefasthamptonroadsva.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://sellmyhousefasthamptonroadsva.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Cash Home Buyers in Virginia Beach: Sell Your House for Cash", "item": "https://sellmyhousefasthamptonroadsva.com/blog/cash-home-buyers-in-virginia-beach"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Are cash home buyers in Virginia Beach legit?", "acceptedAnswer": {"@type": "Answer", "text": "Legitimate cash buyers do exist in Virginia Beach \u2014 we're one of them. The key is vetting: ask for proof of funds, verify they're a real local company (not a wholesaler), and avoid anyone asking for upfront money. Tidewater Property Rentals has been operating in Virginia Beach since 2018."}}, {"@type": "Question", "name": "How much do cash home buyers pay in Virginia Beach?", "acceptedAnswer": {"@type": "Answer", "text": "Cash offers in Virginia Beach typically range from 70% to 85% of after-repair value, minus estimated repair costs. On a $400,000 Virginia Beach home needing $30,000 of work, a fair cash offer would be roughly $250,000-$310,000 depending on market conditions."}}, {"@type": "Question", "name": "Do I have to pay any fees when selling to a cash buyer?", "acceptedAnswer": {"@type": "Answer", "text": "No. At Tidewater Property Rentals, we cover all closing costs, title fees, and paperwork. There are no agent commissions, no service fees, and no hidden charges. The number we quote is the number you receive at closing."}}, {"@type": "Question", "name": "How is a cash offer different from an iBuyer offer?", "acceptedAnswer": {"@type": "Answer", "text": "iBuyers like Opendoor and Offerpad charge service fees of 5-13%, are picky about condition, and typically don't buy older or damaged homes. Local cash buyers like Tidewater buy any condition with no fees. Read our full comparison in our blog post on cash buyers vs iBuyers."}}, {"@type": "Question", "name": "Can cash buyers close faster than 7 days?", "acceptedAnswer": {"@type": "Answer", "text": "In most Virginia Beach cases, 7 days is the practical minimum due to title work. Occasionally we can close in 5 days if the title is clean and there are no liens. Most sellers choose 14-30 days to coordinate their move."}}]}]}</script>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel="stylesheet"" media="print" onload="this.media='all'">
@@ -100,6 +113,18 @@
                 <li><a href="/blog/">Blog</a></li>
                 <li><a href="/contact/">Contact</a></li>
                 <li><a href="tel:+17574272274" class="nav-tel">📞 (757) 427-2274</a></li>
+                                <li class="has-dropdown">
+                    <a href="/locations/" class="dropdown-toggle">Areas We Serve <span aria-hidden="true">▾</span></a>
+                    <ul class="dropdown">
+                        <li><a href="/va/virginia-beach/">Sell My House Fast in Virginia Beach VA</a></li>
+                        <li><a href="/va/norfolk/">Sell My House Fast in Norfolk VA</a></li>
+                        <li><a href="/va/chesapeake/">Sell My House Fast in Chesapeake VA</a></li>
+                        <li><a href="/va/suffolk/">Sell My House Fast in Suffolk VA</a></li>
+                        <li><a href="/va/portsmouth/">Sell My House Fast in Portsmouth VA</a></li>
+                        <li><a href="/va/hampton/">Sell My House Fast in Hampton VA</a></li>
+                        <li><a href="/va/newport-news/">Sell My House Fast in Newport News VA</a></li>
+                    </ul>
+                </li>
                 <li><a href="#get-offer" class="nav-cta">Get Cash Offer</a></li>
             </ul>
         </div>
@@ -170,7 +195,7 @@
         <p>For a detailed walkthrough with real Virginia Beach numbers, check out our guide on <a href="/blog/how-much-do-cash-buyers-pay-virginia-beach/">how much cash buyers pay for houses in Virginia Beach</a>.</p>
 
         <h2>What Virginia Beach Neighborhoods Do We Buy In?</h2>
-        <p>We buy throughout Virginia Beach, including Kempsville, Great Neck, Pungo, Red Mill, Hilltop, Bay Colony, Linkhorn Bay, Thalia, Aragona Village, Princess Anne, Chesapeake Beach (Chic's Beach), Bayville Park, Shore Drive, Croatan, Sandbridge, Birdneck Point, Lake Smith, Strawbridge, Landstown, Indian River, Kings Grant, and everywhere in between. If you're in Virginia Beach city limits, we're interested.</p>
+        <p>We buy throughout Virginia Beach, including Kempsville, Great Neck, Pungo, Red Mill, Hilltop, Bay Colony, Linkhorn Bay, Thalia, Aragona Village, Princess Anne, <a href="/va/chesapeake/">Chesapeake</a> Beach (Chic's Beach), Bayville Park, Shore Drive, Croatan, Sandbridge, Birdneck Point, Lake Smith, Strawbridge, Landstown, Indian River, Kings Grant, and everywhere in between. If you're in Virginia Beach city limits, we're interested.</p>
 
         <h2>Conditions We Buy Ã¢ÂÂ Anything Goes</h2>
         <ul>
@@ -251,7 +276,17 @@
                 <p style="font-size:0.9em;">Phone: <a href="tel:7574272274">(757) 427-2274</a></p>
                 <p style="font-size:0.9em;">Email: <a href="mailto:tom@vahomes.com">tom@vahomes.com</a></p>
             </div>
-        </div>
+                <div class="footer-links">
+                    <h4>Areas We Serve</h4>
+                    <a href="/va/virginia-beach/">Sell My House Fast in Virginia Beach VA</a>
+                    <a href="/va/norfolk/">Sell My House Fast in Norfolk VA</a>
+                    <a href="/va/chesapeake/">Sell My House Fast in Chesapeake VA</a>
+                    <a href="/va/suffolk/">Sell My House Fast in Suffolk VA</a>
+                    <a href="/va/portsmouth/">Sell My House Fast in Portsmouth VA</a>
+                    <a href="/va/hampton/">Sell My House Fast in Hampton VA</a>
+                    <a href="/va/newport-news/">Sell My House Fast in Newport News VA</a>
+                </div>
+            </div>
         <div class="footer-bottom">&copy; 2026 Tidewater Property Rentals LLC. All rights reserved.</div>
     </footer>
     <script>function toggleMenu(){document.querySelector('.nav-links').classList.toggle('active');}</script>

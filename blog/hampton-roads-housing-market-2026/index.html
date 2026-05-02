@@ -81,6 +81,19 @@
             .nav-tel { display: inline-flex; align-items: center; gap: 0.35rem; font-weight: 700; color: var(--accent, #e67e22); text-decoration: none; padding: 0.6rem 0.9rem; border-radius: 5px; transition: background 0.2s; }
         .nav-tel:hover { background: rgba(230,126,34,0.08); }
         @media (max-width: 768px) { .nav-tel { padding: 0.5rem 0.6rem; font-size: 0.95rem; } }
+        .has-dropdown { position: relative; }
+        .dropdown-toggle { cursor: pointer; }
+        .dropdown { display: none; position: absolute; top: 100%; left: 0; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.12); border-radius: 8px; padding: 0.5rem 0; min-width: 280px; list-style: none; z-index: 100; margin-top: 0.5rem; }
+        .has-dropdown:hover .dropdown, .has-dropdown:focus-within .dropdown { display: block; }
+        .dropdown li { padding: 0; }
+        .dropdown li a { display: block; padding: 0.6rem 1rem; color: #2c3e50; text-decoration: none; font-weight: 500; transition: background 0.15s; }
+        .dropdown li a:hover { background: #f0f6fa; color: var(--accent, #e67e22); }
+        @media (max-width: 768px) {
+          .dropdown { position: static; box-shadow: none; padding: 0; margin: 0; min-width: 0; }
+          .has-dropdown:hover .dropdown { display: none; }
+          .has-dropdown.open .dropdown { display: block; }
+          .dropdown li a { padding: 0.5rem 1rem; }
+        }
 </style>
 
 <style>
@@ -116,6 +129,18 @@
                 <li><a href="/blog/">Blog</a></li>
                 <li><a href="/contact/">Contact</a></li>
                 <li><a href="tel:+17574272274" class="nav-tel">📞 (757) 427-2274</a></li>
+                                <li class="has-dropdown">
+                    <a href="/locations/" class="dropdown-toggle">Areas We Serve <span aria-hidden="true">▾</span></a>
+                    <ul class="dropdown">
+                        <li><a href="/va/virginia-beach/">Sell My House Fast in Virginia Beach VA</a></li>
+                        <li><a href="/va/norfolk/">Sell My House Fast in Norfolk VA</a></li>
+                        <li><a href="/va/chesapeake/">Sell My House Fast in Chesapeake VA</a></li>
+                        <li><a href="/va/suffolk/">Sell My House Fast in Suffolk VA</a></li>
+                        <li><a href="/va/portsmouth/">Sell My House Fast in Portsmouth VA</a></li>
+                        <li><a href="/va/hampton/">Sell My House Fast in Hampton VA</a></li>
+                        <li><a href="/va/newport-news/">Sell My House Fast in Newport News VA</a></li>
+                    </ul>
+                </li>
                 <li><a href="#get-offer" class="nav-cta">Get Cash Offer</a></li>
             </ul>
         </div>
@@ -132,10 +157,10 @@
         <h2>Hampton Roads Housing Market Overview for 2026</h2>
         <p>The Hampton Roads real estate market continues to evolve in 2026, presenting unique opportunities and challenges for homeowners looking to sell. With military installations, shipbuilding industries, and a growing tech sector driving demand, the region remains one of the most dynamic housing markets in Virginia.</p>
         
-        <p>Whether you own property in Virginia Beach, Norfolk, Chesapeake, or any of the surrounding cities, understanding current market conditions can help you make informed decisions about selling your home.</p>
+        <p>Whether you own property in <a href="/va/virginia-beach/">Virginia Beach</a>, <a href="/va/norfolk/">Norfolk</a>, <a href="/va/chesapeake/">Chesapeake</a>, or any of the surrounding cities, understanding current market conditions can help you make informed decisions about selling your home.</p>
 
         <h2>Home Prices and Market Conditions</h2>
-        <p>Median home prices across Hampton Roads have seen steady growth over the past several years. Virginia Beach leads the region with higher median sale prices, while cities like Portsmouth and Newport News offer more affordable entry points. The overall trend shows a market that favors sellers, though rising interest rates have tempered some buyer enthusiasm.</p>
+        <p>Median home prices across Hampton Roads have seen steady growth over the past several years. Virginia Beach leads the region with higher median sale prices, while cities like <a href="/va/portsmouth/">Portsmouth</a> and <a href="/va/newport-news/">Newport News</a> offer more affordable entry points. The overall trend shows a market that favors sellers, though rising interest rates have tempered some buyer enthusiasm.</p>
         
         <p>Inventory levels remain relatively tight across the region, which means well-priced homes continue to attract multiple offers. However, homes that need significant repairs or updating may sit on the market longer as buyers become more selective with their budgets.</p>
 
@@ -200,7 +225,17 @@
                 <p style="font-size: 0.9em; margin-bottom: 5px;">Email: info@tidewaterpropertyrentalsllc.com</p>
                 <p style="font-size: 0.9em;">Hampton Roads, Virginia</p>
             </div>
-        </div>
+                <div class="footer-links">
+                    <h4>Areas We Serve</h4>
+                    <a href="/va/virginia-beach/">Sell My House Fast in Virginia Beach VA</a>
+                    <a href="/va/norfolk/">Sell My House Fast in Norfolk VA</a>
+                    <a href="/va/chesapeake/">Sell My House Fast in Chesapeake VA</a>
+                    <a href="/va/suffolk/">Sell My House Fast in Suffolk VA</a>
+                    <a href="/va/portsmouth/">Sell My House Fast in Portsmouth VA</a>
+                    <a href="/va/hampton/">Sell My House Fast in Hampton VA</a>
+                    <a href="/va/newport-news/">Sell My House Fast in Newport News VA</a>
+                </div>
+            </div>
         <div class="footer-bottom">
             <p>&copy; 2026 Tidewater Property Rentals LLC. All rights reserved.</p>
         </div>

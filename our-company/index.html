@@ -78,6 +78,19 @@ setTimeout(_loadGTM,3500);
         @media (max-width: 768px) { .nav-tel { padding: 0.5rem 0.6rem; font-size: 0.95rem; } }
         .footer-tel { color: var(--accent, #e67e22); font-weight: 600; text-decoration: none; }
         .footer-tel:hover { text-decoration: underline; }
+        .has-dropdown { position: relative; }
+        .dropdown-toggle { cursor: pointer; }
+        .dropdown { display: none; position: absolute; top: 100%; left: 0; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.12); border-radius: 8px; padding: 0.5rem 0; min-width: 280px; list-style: none; z-index: 100; margin-top: 0.5rem; }
+        .has-dropdown:hover .dropdown, .has-dropdown:focus-within .dropdown { display: block; }
+        .dropdown li { padding: 0; }
+        .dropdown li a { display: block; padding: 0.6rem 1rem; color: #2c3e50; text-decoration: none; font-weight: 500; transition: background 0.15s; }
+        .dropdown li a:hover { background: #f0f6fa; color: var(--accent, #e67e22); }
+        @media (max-width: 768px) {
+          .dropdown { position: static; box-shadow: none; padding: 0; margin: 0; min-width: 0; }
+          .has-dropdown:hover .dropdown { display: none; }
+          .has-dropdown.open .dropdown { display: block; }
+          .dropdown li a { padding: 0.5rem 1rem; }
+        }
 </style>
 
     <link rel="canonical" href="https://sellmyhousefasthamptonroadsva.com/our-company/">
@@ -111,6 +124,18 @@ setTimeout(_loadGTM,3500);
                 <li><a href="/blog/">Blog</a></li>
                 <li><a href="/contact/">Contact</a></li>
                 <li><a href="tel:+17574272274" class="nav-tel">📞 (757) 427-2274</a></li>
+                                <li class="has-dropdown">
+                    <a href="/locations/" class="dropdown-toggle">Areas We Serve <span aria-hidden="true">▾</span></a>
+                    <ul class="dropdown">
+                        <li><a href="/va/virginia-beach/">Sell My House Fast in Virginia Beach VA</a></li>
+                        <li><a href="/va/norfolk/">Sell My House Fast in Norfolk VA</a></li>
+                        <li><a href="/va/chesapeake/">Sell My House Fast in Chesapeake VA</a></li>
+                        <li><a href="/va/suffolk/">Sell My House Fast in Suffolk VA</a></li>
+                        <li><a href="/va/portsmouth/">Sell My House Fast in Portsmouth VA</a></li>
+                        <li><a href="/va/hampton/">Sell My House Fast in Hampton VA</a></li>
+                        <li><a href="/va/newport-news/">Sell My House Fast in Newport News VA</a></li>
+                    </ul>
+                </li>
                 <li><a href="#get-offer" class="nav-cta">Get Cash Offer</a></li>
             </ul>
         </div>
@@ -129,7 +154,20 @@ setTimeout(_loadGTM,3500);
     <section class="cta-section"><h2>Let's Work Together</h2><p>Whether you're facing a challenging situation or simply ready to move on, we're here to help.</p><div class="form-container"><form id="leadForm" onsubmit="handleFormSubmit(event)"><div class="form-group"><label for="firstName">First Name</label><input type="text" id="firstName" name="firstName" required></div><div class="form-group"><label for="lastName">Last Name</label><input type="text" id="lastName" name="lastName" required></div><div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" required></div><div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" required></div><div class="form-group"><label for="address">Property Address</label><input type="text" id="address" name="address" required></div><button type="submit" class="submit-btn">Get My Cash Offer</button></form></div></section>
 
     <footer><div class="footer-content"><div class="footer-section"><h3>Quick Links</h3><ul><li><a href="/how-it-works/">How It Works</a></li><li><a href="/about/">About Us</a></li><li><a href="/our-company/">Our Company</a></li><li><a href="/locations/">Locations</a></li></ul></div><div class="footer-section"><h3>Resources</h3><ul><li><a href="/blog/">Blog</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/contact/">Contact Us</a></li><li><a href="/privacy/">Privacy Policy</a></li></ul></div><div class="footer-section footer-contact"><h3>Contact Info</h3><p>Hampton Roads, Virginia</p><p><a href="tel:+17574272274" class="footer-tel">📞 (757) 427-2274</a></p>
-                    <p>Email: tom@vahomes.com</p></div></div><div class="footer-bottom"><p>&copy; 2026 Tidewater Property Rentals LLC. All rights reserved.</p></div></footer>
+                    <p>Email: tom@vahomes.com</p></div>
+      <div class="footer-section">
+        <h4>Areas We Serve</h4>
+        <ul>
+          <li><a href="/va/virginia-beach/">Sell My House Fast in Virginia Beach VA</a></li>
+          <li><a href="/va/norfolk/">Sell My House Fast in Norfolk VA</a></li>
+          <li><a href="/va/chesapeake/">Sell My House Fast in Chesapeake VA</a></li>
+          <li><a href="/va/suffolk/">Sell My House Fast in Suffolk VA</a></li>
+          <li><a href="/va/portsmouth/">Sell My House Fast in Portsmouth VA</a></li>
+          <li><a href="/va/hampton/">Sell My House Fast in Hampton VA</a></li>
+          <li><a href="/va/newport-news/">Sell My House Fast in Newport News VA</a></li>
+        </ul>
+      </div>
+    </div><div class="footer-bottom"><p>&copy; 2026 Tidewater Property Rentals LLC. All rights reserved.</p></div></footer>
 
     <script>function handleFormSubmit(e){e.preventDefault();var d={firstName:document.getElementById('firstName').value,lastName:document.getElementById('lastName').value,email:document.getElementById('email').value,phone:document.getElementById('phone').value,address:document.getElementById('address').value};fetch('https://formsubmit.co/ajax/tom@vahomes.com',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}).then(function(r){if(r.ok){alert('Thank you! We will contact you within 24 hours with your cash offer.');document.getElementById('leadForm').reset();}else{alert('Error. Please try again.');}}).catch(function(){alert('Error. Please try again.');});}</script>
 <script>function toggleMenu() { document.querySelector('.nav-links').classList.toggle('active'); }</script>
